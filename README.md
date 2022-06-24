@@ -23,7 +23,6 @@ Integrantes:
 
 <h3>PROGRAMA DE GESTIÓN VETERINARIA “VetPro”</h3>
 <h4>¿En qué va a consistir nuestro programa? ¿Por qué elegimos un programa de gestión veterinaria?</h4>
-
 <p>La raíz de este proyecto es buscar una solución a un sistema ineficiente visto en muchas veterinarias, en especial en el aspecto de registro de clientes y mascotas. 
 
 Por ejemplo, después de registrar a una mascota en una veterinaria, lo más común es que a un cliente se le entregue una cartilla en la que se recopilan los datos de sus mascotas. Generalmente datos como: **Nombre, información del dueño, fechas de vacunas, fechas de desparasitación, etc.** Todo ello registrado en una cartilla que en muchos casos termina siendo desechada o pérdida, ya sea por el ajetreo de la vida diaria de los dueños o a un sistema de registro de información antiguo y casi obsoleto.
