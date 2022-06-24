@@ -18,3 +18,6 @@ Integrantes:
 <a href="https://www.sqlite.org/index.html" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" width="36" height="36" alt="sqlite" /></a>
 <a href="https://es.wikipedia.org/wiki/Microsoft_Visual_Studio" target="_blank" rel="noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/768px-Visual_Studio_Icon_2019.svg.png?20210214224138" width="36" height="36" alt="VisualStudio" /></a>
 </p>
+
+===========================
+
