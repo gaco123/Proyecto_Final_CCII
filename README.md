@@ -29,9 +29,9 @@ Integrantes:
 Por ejemplo, después de registrar a una mascota en una veterinaria, lo más común es que a un cliente se le entregue una cartilla en la que se recopilan los datos de sus mascotas. Generalmente datos como: **Nombre, información del dueño, fechas de vacunas, fechas de desparasitación, etc.** Todo ello registrado en una cartilla que en muchos casos termina siendo desechada o pérdida, ya sea por el ajetreo de la vida diaria de los dueños o a un sistema de registro de información antiguo y casi obsoleto.
 
 Nosotros buscamos realizar un programa de escritorio que solucione esta problemática, un sistema que permita gestionar y mostrar mediante una interfaz interactiva e intuitiva: **Datos de los clientes, datos de las mascotas de los clientes, registro de vacunas de las mascotas, facturas, citas, y muchas cosas más.**</p>
-<p>---------------------------</p>
+<p>------------------------------------------------------</p>
 <h4>¿Qué lenguaje de programación y herramientas vamos a usar para desarrollar nuestro programa?</h4>
 <p>El lenguaje de programación usado para nuestro programa será C++, también usaremos una interfaz de programación de aplicación gráfica *(WinForms)* y una base de datos *(en este caso SQLite)*, la cual se encargará de almacenar y mantener seguros todos los datos de la aplicación en la nube.</p>
-<p>---------------------------</p>
+<p>------------------------------------------------------</p>
 <h4>¿Cuál va a ser el camino a seguir para desarrollar nuestro programa?</h4>
 <p>Proximamente...</p>
