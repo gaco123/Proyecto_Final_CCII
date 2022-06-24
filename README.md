@@ -22,7 +22,7 @@ Integrantes:
 ===========================
 
 <h3>PROGRAMA DE GESTIÓN VETERINARIA “VetPro”</h3>
-<p>---------------------------</p>
+<p>===========================</p>
 <h4>¿En qué va a consistir nuestro programa? ¿Por qué elegimos un programa de gestión veterinaria?</h4>
 <p>La raíz de este proyecto es buscar una solución a un sistema ineficiente visto en muchas veterinarias, en especial en el aspecto de registro de clientes y mascotas. 
 
