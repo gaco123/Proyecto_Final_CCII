@@ -32,4 +32,6 @@ Nosotros buscamos realizar un programa de escritorio que solucione esta problem�
 <p>---------------------------</p>
 <h4>¿Qué lenguaje de programación y herramientas vamos a usar para desarrollar nuestro programa?</h4>
 <p>El lenguaje de programación usado para nuestro programa será C++, también usaremos una interfaz de programación de aplicación gráfica *(WinForms)* y una base de datos *(en este caso SQLite)*, la cual se encargará de almacenar y mantener seguros todos los datos de la aplicación en la nube.</p>
-
+<p>---------------------------</p>
+<h4>¿Cuál va a ser el camino a seguir para desarrollar nuestro programa?</h4>
+<p>Proximamente...</p>
