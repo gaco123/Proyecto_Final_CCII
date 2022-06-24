@@ -30,5 +30,5 @@ Por ejemplo, después de registrar a una mascota en una veterinaria, lo más com
 Nosotros buscamos realizar un programa de escritorio que solucione esta problemática, un sistema que permita gestionar y mostrar mediante una interfaz interactiva e intuitiva: **Datos de los clientes, datos de las mascotas de los clientes, registro de vacunas de las mascotas, facturas, citas, y muchas cosas más.**</p>
 
 <h4>¿Qué lenguaje de programación y herramientas vamos a usar para desarrollar nuestro programa?</h4>
-El lenguaje de programación usado para nuestro programa será C++, también usaremos una interfaz de programación de aplicación gráfica *(WinForms)* y una base de datos *(en este caso SQLite)*, la cual se encargará de almacenar y mantener seguros todos los datos de la aplicación en la nube.
+<p>El lenguaje de programación usado para nuestro programa será C++, también usaremos una interfaz de programación de aplicación gráfica *(WinForms)* y una base de datos *(en este caso SQLite)*, la cual se encargará de almacenar y mantener seguros todos los datos de la aplicación en la nube.</p>
 
