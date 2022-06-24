@@ -6,10 +6,11 @@ Proyecto Final del Curso de CCII
 -------------
 Integrantes:
 
-* Quicaño
-* Soto
-* Ramirez
-*
+* Quicaño Miranda, Victor Alejandro
+* Soto Huerta, Angela Shirleth
+* Ramirez Zarate, Patrick Rene
+* Rodriguez Cutimbo, Gabriel Fernando
+* Farfan Huayta, Mauricio Alejandro
 ### Hecho con...
 
 <p align="left">
