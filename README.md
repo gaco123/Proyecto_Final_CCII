@@ -21,8 +21,8 @@ Integrantes:
 
 ===========================
 
-<h3>PROYECTO: VETERINARIA “MUCHO AMOR”</h3><br>
-<h4>¿En qué va a consistir nuestro proyecto? ¿Por qué elegimos una veterinaria?</h4>
+<h3>PROYECTO: VETERINARIA “MUCHO AMOR”</h3>
+<h4>¿En qué va a consistir nuestro proyecto? ¿Por qué elegimos una veterinaria?</h4><br>
 
 La raíz de este proyecto es buscar una solución a un sistema ineficiente visto en muchas veterinarias, en especial en el aspecto de registro de clientes y mascotas. 
 
