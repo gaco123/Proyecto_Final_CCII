@@ -26,7 +26,7 @@ Integrantes:
 
 <p>La raíz de este proyecto es buscar una solución a un sistema ineficiente visto en muchas veterinarias, en especial en el aspecto de registro de clientes y mascotas. 
 
-Por ejemplo, después de registrar a nuestra mascota en una veterinaria, lo más común es que a un cliente se le entregue una cartilla en la que se recopilan los datos de sus mascotas. Generalmente datos como: *Nombre, información del dueño, fechas de vacunas, fechas de desparasitación, etc.* Todo ello registrado en una cartilla que en muchos casos termina siendo desechada o pérdida, ya sea por el ajetreo de la vida diaria de los dueños o a un sistema de registro de información antiguo y casi obsoleto.
+Por ejemplo, después de registrar a una mascota en una veterinaria, lo más común es que a un cliente se le entregue una cartilla en la que se recopilan los datos de sus mascotas. Generalmente datos como: *Nombre, información del dueño, fechas de vacunas, fechas de desparasitación, etc.* Todo ello registrado en una cartilla que en muchos casos termina siendo desechada o pérdida, ya sea por el ajetreo de la vida diaria de los dueños o a un sistema de registro de información antiguo y casi obsoleto.
 
 Nosotros buscamos realizar un programa de escritorio que solucione esta problemática, un sistema que permita gestionar y mostrar de una forma interactiva: *Datos de los clientes, datos de las mascotas de los clientes, registro de vacunas de las mascotas, facturas, citas, y muchas cosas más.*</p>
 
