@@ -2,7 +2,7 @@
 
 ===========================
 
-<h1>Proyecto Final del Curso de CCII</h1>
+Proyecto Final del Curso de CCII
 -------------
 Integrantes:
 
