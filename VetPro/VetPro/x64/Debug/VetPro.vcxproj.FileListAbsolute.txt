@@ -5,3 +5,10 @@ F:\Gabriel Documentos\UNSA\Semestre 2022-A\Ciencia de la Computación II\GitHub\
 F:\Gabriel Documentos\UNSA\Semestre 2022-A\Ciencia de la Computación II\GitHub\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.vcxproj.GenerateResource.cache
 F:\Gabriel Documentos\UNSA\Semestre 2022-A\Ciencia de la Computación II\GitHub\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.Register.resources
 F:\Gabriel Documentos\UNSA\Semestre 2022-A\Ciencia de la Computación II\GitHub\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.Main_menu.resources
+D:\Carrera\2do Año\III CICLO\CCII\Proyecto\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.vcxproj.AssemblyReference.cache
+D:\Carrera\2do Año\III CICLO\CCII\Proyecto\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.vcxproj.SuggestedBindingRedirects.cache
+D:\Carrera\2do Año\III CICLO\CCII\Proyecto\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.Login.resources
+D:\Carrera\2do Año\III CICLO\CCII\Proyecto\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.Main_menu.resources
+D:\Carrera\2do Año\III CICLO\CCII\Proyecto\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.Register.resources
+D:\Carrera\2do Año\III CICLO\CCII\Proyecto\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.vcxproj.GenerateResource.cache
+D:\Carrera\2do Año\III CICLO\CCII\Proyecto\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.vcxproj.CopyComplete

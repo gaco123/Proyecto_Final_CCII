@@ -123,11 +123,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CircularPictureBox.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="Main_menu.cpp" />
     <ClCompile Include="Register.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CircularPictureBox.h" />
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -137,6 +139,7 @@
     <ClInclude Include="Register.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Login.resx">
@@ -148,6 +151,9 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VetPro.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
