@@ -186,7 +186,7 @@ namespace VetPro {
 			if (dataReader->Read()) {
 				this->Visible = false;
 				String^ usu = dataReader["nombres"]->ToString();
-				MessageBox::Show("Aqui ta " + usu);
+				MessageBox::Show("Ingresó Dr. " + usu);
 				VetPro::Main_menu^ nwindow1 = gcnew VetPro::Main_menu(usu);
 				nwindow1->ShowDialog();
 				this->Visible = true;

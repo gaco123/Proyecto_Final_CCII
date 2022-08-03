@@ -22,7 +22,7 @@ namespace VetPro {
 		Main_menu(System::String^ user) {
 			InitializeComponent();
 			this->user = user;
-			this->name->Text = user;
+			this->name->Text ="Bienvenido\n"+ user;
 		}
 	protected:
 		/// <summary>
@@ -48,12 +48,13 @@ namespace VetPro {
 	private: System::Windows::Forms::Panel^ panel4;
 	private: System::Windows::Forms::Label^ name;
 
-	private: System::Windows::Forms::Label^ label3;
+
 	private: System::Windows::Forms::Panel^ panel5;
 
 	private: System::Windows::Forms::Button^ clientes;
 	private: System::Windows::Forms::Button^ citas;
 	private: System::Windows::Forms::PictureBox^ logo;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 
 
@@ -83,17 +84,19 @@ namespace VetPro {
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->name = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->icon_menu))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->icon_vet))->BeginInit();
 			this->panel2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logo))->BeginInit();
 			this->Menu->SuspendLayout();
+			this->panel5->SuspendLayout();
 			this->panel4->SuspendLayout();
 			this->panel3->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -190,9 +193,9 @@ namespace VetPro {
 			this->clientes->Font = (gcnew System::Drawing::Font(L"Yet R", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
 			this->clientes->ForeColor = System::Drawing::Color::White;
-			this->clientes->Location = System::Drawing::Point(0, 397);
+			this->clientes->Location = System::Drawing::Point(0, 638);
 			this->clientes->Name = L"clientes";
-			this->clientes->Size = System::Drawing::Size(343, 74);
+			this->clientes->Size = System::Drawing::Size(343, 84);
 			this->clientes->TabIndex = 3;
 			this->clientes->Text = L"Clientes";
 			this->clientes->UseVisualStyleBackColor = true;
@@ -204,29 +207,29 @@ namespace VetPro {
 			this->citas->Font = (gcnew System::Drawing::Font(L"Yet R", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
 			this->citas->ForeColor = System::Drawing::Color::White;
-			this->citas->Location = System::Drawing::Point(0, 323);
+			this->citas->Location = System::Drawing::Point(0, 556);
 			this->citas->Name = L"citas";
-			this->citas->Size = System::Drawing::Size(343, 74);
+			this->citas->Size = System::Drawing::Size(343, 82);
 			this->citas->TabIndex = 2;
 			this->citas->Text = L"Citas";
 			this->citas->UseVisualStyleBackColor = true;
 			// 
 			// panel5
 			// 
+			this->panel5->Controls->Add(this->pictureBox1);
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel5->Location = System::Drawing::Point(0, 91);
+			this->panel5->Location = System::Drawing::Point(0, 174);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(343, 232);
+			this->panel5->Size = System::Drawing::Size(343, 382);
 			this->panel5->TabIndex = 1;
 			// 
 			// panel4
 			// 
 			this->panel4->Controls->Add(this->name);
-			this->panel4->Controls->Add(this->label3);
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel4->Location = System::Drawing::Point(0, 0);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(343, 91);
+			this->panel4->Size = System::Drawing::Size(343, 174);
 			this->panel4->TabIndex = 0;
 			// 
 			// name
@@ -235,23 +238,12 @@ namespace VetPro {
 			this->name->Font = (gcnew System::Drawing::Font(L"Yet R", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
 			this->name->ForeColor = System::Drawing::Color::White;
-			this->name->Location = System::Drawing::Point(87, 42);
+			this->name->Location = System::Drawing::Point(86, 71);
 			this->name->Name = L"name";
 			this->name->Size = System::Drawing::Size(176, 35);
 			this->name->TabIndex = 1;
 			this->name->Text = L"PANCHITO";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Yet R", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(129)));
-			this->label3->ForeColor = System::Drawing::Color::White;
-			this->label3->Location = System::Drawing::Point(105, 14);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(141, 26);
-			this->label3->TabIndex = 0;
-			this->label3->Text = L"Bienvenido";
+			this->name->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// panel3
 			// 
@@ -277,6 +269,14 @@ namespace VetPro {
 			this->label2->Size = System::Drawing::Size(0, 29);
 			this->label2->TabIndex = 0;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Location = System::Drawing::Point(16, 24);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(303, 289);
+			this->pictureBox1->TabIndex = 0;
+			this->pictureBox1->TabStop = false;
+			// 
 			// Main_menu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -299,10 +299,12 @@ namespace VetPro {
 			this->panel2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logo))->EndInit();
 			this->Menu->ResumeLayout(false);
+			this->panel5->ResumeLayout(false);
 			this->panel4->ResumeLayout(false);
 			this->panel4->PerformLayout();
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
