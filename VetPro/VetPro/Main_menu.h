@@ -27,13 +27,11 @@ namespace VetPro {
 		}
 		Main_menu(System::String^ usuario) {
 			InitializeComponent();
-			MessageBox::Show(L"Reconociendo Base de datos");
 			String^ connectionString = "datasource=localhost; username=root; password=1234; database=prueba";
 			String^ sql = "select * from admins where usuario = '" + usuario + "'";
 			MySqlConnection^ conn = gcnew MySqlConnection(connectionString);
 			MySqlCommand^ cursor = gcnew MySqlCommand(sql, conn);
 			MySqlDataReader^ dataReader;
-			//String^ nombre;
 			try {
 				conn->Open();
 				dataReader = cursor->ExecuteReader();
@@ -47,25 +45,20 @@ namespace VetPro {
 			}catch (Exception^ x) {
 					MessageBox::Show(x->Message);
 			}
-			MessageBox::Show(L"Tenemos el nommbre");
 			conn->Close();
 			conn->Open();
-			String^ sql2= "SELECT * FROM admins where usuario = '"+usuario+"'";
-			MessageBox::Show(L"Tenemos la tabla");
+			String^ sql2= "SELECT * FROM admins where usuario = '"+usuario+"'";;
 			MySqlCommand^ cursor2 = gcnew MySqlCommand(sql2, conn);
 			MySqlDataAdapter^ da = gcnew MySqlDataAdapter(cursor2);
 			DataTable^ tabla_aux = gcnew DataTable();
 			da->Fill(tabla_aux);
-			MessageBox::Show(L"Lllenamos la tabla");
-			array<Byte>^ imagen = gcnew array <Byte>(300);
+			array<Byte>^ imagen = gcnew array <Byte>(300000000000000);
 			DataRow^ dr = tabla_aux->Rows[0];
 			imagen = (array<Byte>^) dr[5];
 			MemoryStream^ ms = gcnew MemoryStream(imagen);
 			this->Foto_usu->Image = Drawing::Image::FromStream(ms);
 			//da->Dispose();
 			conn->Close();
-			//this->Foto_usu->Image = Image->FromStream(ms);
-
 			//El user recibido del login nos ayudará a organizar
 			//los datos que se recibirán y mostrarán de la base de datos
 			
@@ -244,7 +237,7 @@ namespace VetPro {
 			this->clientes->Font = (gcnew System::Drawing::Font(L"Yet R", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
 			this->clientes->ForeColor = System::Drawing::Color::White;
-			this->clientes->Location = System::Drawing::Point(0, 638);
+			this->clientes->Location = System::Drawing::Point(0, 605);
 			this->clientes->Name = L"clientes";
 			this->clientes->Size = System::Drawing::Size(343, 84);
 			this->clientes->TabIndex = 3;
@@ -258,7 +251,7 @@ namespace VetPro {
 			this->citas->Font = (gcnew System::Drawing::Font(L"Yet R", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
 			this->citas->ForeColor = System::Drawing::Color::White;
-			this->citas->Location = System::Drawing::Point(0, 556);
+			this->citas->Location = System::Drawing::Point(0, 523);
 			this->citas->Name = L"citas";
 			this->citas->Size = System::Drawing::Size(343, 82);
 			this->citas->TabIndex = 2;
@@ -269,7 +262,7 @@ namespace VetPro {
 			// 
 			this->panel5->Controls->Add(this->Foto_usu);
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel5->Location = System::Drawing::Point(0, 174);
+			this->panel5->Location = System::Drawing::Point(0, 141);
 			this->panel5->Name = L"panel5";
 			this->panel5->Size = System::Drawing::Size(343, 382);
 			this->panel5->TabIndex = 1;
@@ -290,7 +283,7 @@ namespace VetPro {
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel4->Location = System::Drawing::Point(0, 0);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(343, 174);
+			this->panel4->Size = System::Drawing::Size(343, 141);
 			this->panel4->TabIndex = 0;
 			// 
 			// name
@@ -299,7 +292,7 @@ namespace VetPro {
 			this->name->Font = (gcnew System::Drawing::Font(L"Yet R", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
 			this->name->ForeColor = System::Drawing::Color::White;
-			this->name->Location = System::Drawing::Point(86, 71);
+			this->name->Location = System::Drawing::Point(86, 52);
 			this->name->Name = L"name";
 			this->name->Size = System::Drawing::Size(176, 35);
 			this->name->TabIndex = 1;

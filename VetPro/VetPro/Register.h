@@ -325,7 +325,7 @@ namespace VetPro {
 	}
 
 	private: System::Void regis_button_Click(System::Object^ sender, System::EventArgs^ e) {
-		array<Byte>^ imagen = gcnew array <Byte>(300);
+		array<Byte>^ imagen = gcnew array <Byte>(300000000000000);
 		FileStream^ fst = gcnew FileStream(filelocation,FileMode::Open, FileAccess::Read);
 		BinaryReader^ br = gcnew BinaryReader(fst);
 		imagen = br->ReadBytes((int)fst->Length);  
