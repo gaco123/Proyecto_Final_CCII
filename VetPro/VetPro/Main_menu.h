@@ -9,6 +9,12 @@ namespace VetPro {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace MySql::Data::MySqlClient;
+	using namespace System::Text;
+	using namespace System::IO;
+	using namespace System::Threading;
+	using namespace System::Threading::Tasks;
+	using namespace System::Threading;
 
 	/// <summary>
 	/// Resumen de Main_menu
@@ -19,10 +25,54 @@ namespace VetPro {
 		Main_menu(void){
 			InitializeComponent();
 		}
-		Main_menu(System::String^ user) {
+		Main_menu(System::String^ usuario) {
 			InitializeComponent();
-			this->user = user;
-			this->name->Text ="Bienvenido\n"+ user;
+			MessageBox::Show(L"Reconociendo Base de datos");
+			String^ connectionString = "datasource=localhost; username=root; password=1234; database=prueba";
+			String^ sql = "select * from admins where usuario = '" + usuario + "'";
+			MySqlConnection^ conn = gcnew MySqlConnection(connectionString);
+			MySqlCommand^ cursor = gcnew MySqlCommand(sql, conn);
+			MySqlDataReader^ dataReader;
+			//String^ nombre;
+			try {
+				conn->Open();
+				dataReader = cursor->ExecuteReader();
+				if (dataReader->Read()) {
+					this->user = usuario;
+					this->name->Text = "Bienvenido\n" + dataReader["nombres"]->ToString();
+				}
+				else {
+					MessageBox::Show(L"Usuario incorrecto");
+				}
+			}catch (Exception^ x) {
+					MessageBox::Show(x->Message);
+			}
+			MessageBox::Show(L"Tenemos el nommbre");
+			conn->Close();
+			conn->Open();
+			String^ sql2= "SELECT * FROM admins where usuario = '"+usuario+"'";
+			MessageBox::Show(L"Tenemos la tabla");
+			MySqlCommand^ cursor2 = gcnew MySqlCommand(sql2, conn);
+			MySqlDataAdapter^ da = gcnew MySqlDataAdapter(cursor2);
+			DataTable^ tabla_aux = gcnew DataTable();
+			da->Fill(tabla_aux);
+			MessageBox::Show(L"Lllenamos la tabla");
+			array<Byte>^ imagen = gcnew array <Byte>(300);
+			DataRow^ dr = tabla_aux->Rows[0];
+			imagen = (array<Byte>^) dr[5];
+			MemoryStream^ ms = gcnew MemoryStream(imagen);
+			this->Foto_usu->Image = Drawing::Image::FromStream(ms);
+			//da->Dispose();
+			conn->Close();
+			//this->Foto_usu->Image = Image->FromStream(ms);
+
+			//El user recibido del login nos ayudará a organizar
+			//los datos que se recibirán y mostrarán de la base de datos
+			
+			GraphicsPath^ cp = gcnew System::Drawing::Drawing2D::GraphicsPath();
+			cp->AddEllipse(this->Foto_usu->DisplayRectangle);
+			this->Foto_usu->Region = gcnew System::Drawing::Region(cp);
+
 		}
 	protected:
 		/// <summary>
@@ -54,7 +104,8 @@ namespace VetPro {
 	private: System::Windows::Forms::Button^ clientes;
 	private: System::Windows::Forms::Button^ citas;
 	private: System::Windows::Forms::PictureBox^ logo;
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::PictureBox^ Foto_usu;
+
 
 
 
@@ -82,11 +133,11 @@ namespace VetPro {
 			this->clientes = (gcnew System::Windows::Forms::Button());
 			this->citas = (gcnew System::Windows::Forms::Button());
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
+			this->Foto_usu = (gcnew System::Windows::Forms::PictureBox());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->name = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->icon_menu))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->icon_vet))->BeginInit();
@@ -94,9 +145,9 @@ namespace VetPro {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logo))->BeginInit();
 			this->Menu->SuspendLayout();
 			this->panel5->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Foto_usu))->BeginInit();
 			this->panel4->SuspendLayout();
 			this->panel3->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -216,12 +267,22 @@ namespace VetPro {
 			// 
 			// panel5
 			// 
-			this->panel5->Controls->Add(this->pictureBox1);
+			this->panel5->Controls->Add(this->Foto_usu);
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel5->Location = System::Drawing::Point(0, 174);
 			this->panel5->Name = L"panel5";
 			this->panel5->Size = System::Drawing::Size(343, 382);
 			this->panel5->TabIndex = 1;
+			// 
+			// Foto_usu
+			// 
+			this->Foto_usu->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Foto_usu.Image")));
+			this->Foto_usu->Location = System::Drawing::Point(16, 24);
+			this->Foto_usu->Name = L"Foto_usu";
+			this->Foto_usu->Size = System::Drawing::Size(303, 303);
+			this->Foto_usu->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
+			this->Foto_usu->TabIndex = 0;
+			this->Foto_usu->TabStop = false;
 			// 
 			// panel4
 			// 
@@ -269,14 +330,6 @@ namespace VetPro {
 			this->label2->Size = System::Drawing::Size(0, 29);
 			this->label2->TabIndex = 0;
 			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Location = System::Drawing::Point(16, 24);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(303, 289);
-			this->pictureBox1->TabIndex = 0;
-			this->pictureBox1->TabStop = false;
-			// 
 			// Main_menu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -300,11 +353,11 @@ namespace VetPro {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logo))->EndInit();
 			this->Menu->ResumeLayout(false);
 			this->panel5->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Foto_usu))->EndInit();
 			this->panel4->ResumeLayout(false);
 			this->panel4->PerformLayout();
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}

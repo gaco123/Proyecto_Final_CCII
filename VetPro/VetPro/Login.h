@@ -37,7 +37,7 @@ namespace VetPro {
 				delete components;
 			}
 		}
-	private: String^ connectionString = "datasource=localhost; username=root; password=1234; database=veterinaria";
+	private: String^ connectionString = "datasource=localhost; username=root; password=1234; database=prueba";
 	private: MySqlConnection^ conn = gcnew MySqlConnection(connectionString);
 	private: System::Windows::Forms::LinkLabel^ regist_label;
 	private: System::Windows::Forms::Button^ entry_button;
@@ -176,7 +176,7 @@ namespace VetPro {
 		}
 #pragma endregion
 	private: System::Void entry_button_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ sql = "select nombres from admins where Contra = '" + txt_cont->Text + "' and Usuario = '" + txt_user->Text + "'";
+		String^ sql = "select * from admins where Contra = '" + txt_cont->Text + "' and Usuario = '" + txt_user->Text + "'";
 		MySqlCommand^ cursor = gcnew MySqlCommand(sql, conn);
 		MySqlDataReader^ dataReader;
 
@@ -185,8 +185,9 @@ namespace VetPro {
 			dataReader = cursor->ExecuteReader();
 			if (dataReader->Read()) {
 				this->Visible = false;
-				String^ usu = dataReader["nombres"]->ToString();
-				MessageBox::Show("Ingresó Dr. " + usu);
+				String^ nom = dataReader["nombres"]->ToString();
+				String^ usu = dataReader["usuario"]->ToString();
+				MessageBox::Show("Ingresó Dr. " + nom);
 				VetPro::Main_menu^ nwindow1 = gcnew VetPro::Main_menu(usu);
 				nwindow1->ShowDialog();
 				this->Visible = true;
