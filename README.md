@@ -31,17 +31,16 @@ Por ejemplo, después de registrar a una mascota en una veterinaria, lo más com
 Nosotros buscamos realizar un programa de escritorio que solucione esta problemática, un sistema que permita gestionar y mostrar mediante una interfaz interactiva e intuitiva: <b>Datos de los clientes, datos de las mascotas de los clientes, registro de vacunas de las mascotas, facturas, citas, y muchas cosas más.</b></p>
 <p>----------------------------------------------</p>
 <h4>¿Qué lenguaje de programación y herramientas vamos a usar para desarrollar nuestro programa?</h4>
-<p>El lenguaje de programación usado para nuestro programa será C++, también usaremos una interfaz de programación de aplicación gráfica <i>(WinForms)</i> y una base de datos <i>(en este caso SQLite)</i>, la cual se encargará de almacenar y mantener seguros todos los datos de la aplicación en la nube.</p>
-===========================
-
+<p>El lenguaje de programación usado para nuestro programa será C++, también usaremos una interfaz de programación de aplicación gráfica <i>(WinForms)</i> y una base de datos <i>(en este caso MySql Workbench)</i>, la cual se encargará de almacenar y mantener seguros todos los datos de la aplicación en la nube.</p>
+<p>===========================</p>
 <h3>PROCESO SEGUIDO POR EL MOMENTO</h3>
 <p>===========================</p>
 <p>Comenzamos diseñando un prototipo de nuestra aplicación</p>
-<br><br>
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FZjvRwTrsCjNgFQ0PgcXp4W%2FUntitled%3Fnode-id%3D2%253A5%26starting-point-node-id%3D2%253A5" allowfullscreen></iframe>
+
+<iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FZjvRwTrsCjNgFQ0PgcXp4W%2FUntitled%3Fnode-id%3D2%253A5%26starting-point-node-id%3D2%253A5" allowfullscreen></iframe>
 <br>
 <p>Teniendo ya una idea del resultado deseado, procedimos a diseñar la arquitectura y distribución de la base de datos.</p>
-----------
+<p>----------</p>
 <p><i>BASE DE DATOS</i></p>
 <p>----------</p>
 <ul><h4>Distribución</h4>
@@ -56,4 +55,5 @@ Nosotros buscamos realizar un programa de escritorio que solucione esta problem�
 </ul>
 <br>
 <h4>Diagrama de la base de datos</h4>
-![Vet logo](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/Arqui_DB.png)
+===========================
+![Vet Arqui](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/Arqui_DB.png)
