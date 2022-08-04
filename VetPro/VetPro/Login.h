@@ -37,7 +37,7 @@ namespace VetPro {
 				delete components;
 			}
 		}
-	private: String^ connectionString = "datasource=localhost; username=root; password=1234; database=prueba";
+	private: String^ connectionString = "datasource=localhost; username=root; password=1234; database=veterinaria";
 	private: MySqlConnection^ conn = gcnew MySqlConnection(connectionString);
 	private: System::Windows::Forms::LinkLabel^ regist_label;
 	private: System::Windows::Forms::Button^ entry_button;
@@ -176,7 +176,7 @@ namespace VetPro {
 		}
 #pragma endregion
 	private: System::Void entry_button_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ sql = "select * from admins where Contra = '" + txt_cont->Text + "' and Usuario = '" + txt_user->Text + "'";
+		String^ sql = "select * from admins where contra = '" + txt_cont->Text + "' and usuario = '" + txt_user->Text + "'";
 		MySqlCommand^ cursor = gcnew MySqlCommand(sql, conn);
 		MySqlDataReader^ dataReader;
 

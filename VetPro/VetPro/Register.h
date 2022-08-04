@@ -318,7 +318,7 @@ namespace VetPro {
 	private: System::Void btn_suimg_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		OpenFileDialog^ openFile1 = gcnew OpenFileDialog;
-		openFile1->Filter = "PNG Files|*.png|JPEG Files|*.jpeg|JPG Files|*.jpg";
+		openFile1->Filter = "Imagenes|*.png*.jpeg*.jpg";
 		if (System::Windows::Forms::DialogResult::OK == openFile1->ShowDialog()){
 			filelocation = openFile1->FileName->ToString();
 		}
@@ -331,7 +331,7 @@ namespace VetPro {
 		imagen = br->ReadBytes((int)fst->Length);  
 
 
-		String^ sql = "insert into `prueba`.`admins` (`usuario`,`contra`, `nombres`,`apellidos`,`foto`) values ('" + txt_iuser->Text + "','" + txt_icont->Text + "', '" + txt_nombres->Text + "', '" + txt_apes->Text + "', @IMG)";
+		String^ sql = "insert into `veterinaria`.`admins` (`usuario`,`contra`, `nombres`,`apellidos`,`foto`) values ('" + txt_iuser->Text + "','" + txt_icont->Text + "', '" + txt_nombres->Text + "', '" + txt_apes->Text + "', @IMG)";
 		MySqlCommand^ cursor = gcnew MySqlCommand(sql, conn);
 
 		try {
