@@ -176,7 +176,7 @@ namespace VetPro {
 		}
 #pragma endregion
 	private: System::Void entry_button_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ sql = "select * from admins where contra = '" + txt_cont->Text + "' and usuario = '" + txt_user->Text + "'";
+		String^ sql = "select * from veterinarios where contra = '" + txt_cont->Text + "' and usuario = '" + txt_user->Text + "'";
 		MySqlCommand^ cursor = gcnew MySqlCommand(sql, conn);
 		MySqlDataReader^ dataReader;
 
@@ -191,6 +191,7 @@ namespace VetPro {
 				VetPro::Main_menu^ nwindow1 = gcnew VetPro::Main_menu(usu);
 				nwindow1->ShowDialog();
 				this->Visible = true;
+				this->Close();
 			}
 			else {
 				MessageBox::Show(L"Usuario incorrecto");

@@ -27,8 +27,8 @@ namespace VetPro {
 		}
 		Main_menu(System::String^ usuario) {
 			InitializeComponent();
-			String^ connectionString = "datasource=localhost; username=root; password=1234; database=prueba";
-			String^ sql = "select * from admins where usuario = '" + usuario + "'";
+			String^ connectionString = "datasource=localhost; username=root; password=1234; database=veterinaria";
+			String^ sql = "select * from veterinarios where usuario = '" + usuario + "'";
 			MySqlConnection^ conn = gcnew MySqlConnection(connectionString);
 			MySqlCommand^ cursor = gcnew MySqlCommand(sql, conn);
 			MySqlDataReader^ dataReader;
@@ -47,7 +47,7 @@ namespace VetPro {
 			}
 			conn->Close();
 			conn->Open();
-			String^ sql2= "SELECT * FROM admins where usuario = '"+usuario+"'";;
+			String^ sql2= "SELECT * FROM veterinarios where usuario = '"+usuario+"'";;
 			MySqlCommand^ cursor2 = gcnew MySqlCommand(sql2, conn);
 			MySqlDataAdapter^ da = gcnew MySqlDataAdapter(cursor2);
 			DataTable^ tabla_aux = gcnew DataTable();
@@ -273,7 +273,7 @@ namespace VetPro {
 			this->Foto_usu->Location = System::Drawing::Point(16, 24);
 			this->Foto_usu->Name = L"Foto_usu";
 			this->Foto_usu->Size = System::Drawing::Size(303, 303);
-			this->Foto_usu->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
+			this->Foto_usu->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->Foto_usu->TabIndex = 0;
 			this->Foto_usu->TabStop = false;
 			// 
