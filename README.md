@@ -15,7 +15,7 @@ Integrantes:
 
 <p align="left">
 <a href="https://docs.microsoft.com/en-us/cpp/?view=msvc-170" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" width="36" height="36" alt="C++" /></a>
-<a href="https://www.sqlite.org/index.html" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" width="36" height="36" alt="sqlite" /></a>
+<a href="https://www.sqlite.org/index.html" target="_blank" rel="noreferrer"><img src="https://codigosql.top/wp-content/uploads/2020/02/base-de-datos-en-mysql-212x300.png" width="36" height="36" alt="sqlite" /></a>
 <a href="https://es.wikipedia.org/wiki/Microsoft_Visual_Studio" target="_blank" rel="noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/768px-Visual_Studio_Icon_2019.svg.png?20210214224138" width="36" height="36" alt="VisualStudio" /></a>
 </p>
 
@@ -32,6 +32,28 @@ Nosotros buscamos realizar un programa de escritorio que solucione esta problem�
 <p>----------------------------------------------</p>
 <h4>¿Qué lenguaje de programación y herramientas vamos a usar para desarrollar nuestro programa?</h4>
 <p>El lenguaje de programación usado para nuestro programa será C++, también usaremos una interfaz de programación de aplicación gráfica <i>(WinForms)</i> y una base de datos <i>(en este caso SQLite)</i>, la cual se encargará de almacenar y mantener seguros todos los datos de la aplicación en la nube.</p>
-<p>----------------------------------------------</p>
-<h4>¿Cuál va a ser el camino a seguir para desarrollar nuestro programa?</h4>
-<p>Proximamente...</p>
+===========================
+
+<h3>PROCESO SEGUIDO POR EL MOMENTO</h3>
+<p>===========================</p>
+<p>Comenzamos diseñando un prototipo de nuestra aplicación</p>
+<br><br>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FZjvRwTrsCjNgFQ0PgcXp4W%2FUntitled%3Fnode-id%3D2%253A5%26starting-point-node-id%3D2%253A5" allowfullscreen></iframe>
+<br>
+<p>Teniendo ya una idea del resultado deseado, procedimos a diseñar la arquitectura y distribución de la base de datos.</p>
+----------
+<p><i>BASE DE DATOS</i></p>
+<p>----------</p>
+<ul><h4>Distribución</h4>
+<li>Veterinarios</li>
+<ul><li>Almacena los datos de todos los veterinarios. Será de gran utilidad dentro del login, ya que los veterinarios serán quienes manejen la plataforma</li></ul>
+<li>Clientes</li>
+<ul><li>Contiene la información y datos de contacto sobre cada uno de los clientes.</li></ul>
+<li>Mascota</li>
+<ul><li>Maneja la información de todas las mascotas registradas. Se vincula cada mascota con su dueño con una ID (Así no sobrecargamos la base de datos del cliente)</li></ul>
+<li>Citas</li>
+<ul><li>Almacena las citas por fechas, asigando a cada cita una ID y vincula la información de la mascota y el cliente mediante ID's</li></ul>
+</ul>
+<br>
+<h4>Diagrama de la base de datos</h4>
+![Vet logo](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/Arqui_DB.png)
