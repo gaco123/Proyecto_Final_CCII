@@ -35,11 +35,11 @@ El lenguaje de programación usado para nuestro programa será C++, también usa
 ===========================
 ## PROCESO SEGUIDO POR EL MOMENTO
 ===========================
-Comenzamos diseñando un prototipo de nuestra aplicación
----
+
+Comenzamos diseñando un prototipo de nuestra aplicación, teniendo ya una idea del resultado deseado, procedimos a diseñar la arquitectura y distribución de la base de datos.
+
 [![Prototipo](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/Prototipo.png "Prototipo")](https://www.figma.com/proto/ZjvRwTrsCjNgFQ0PgcXp4W/Vet_Proto?node-id=2%3A5&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A5 "Prototipo")
----
-Teniendo ya una idea del resultado deseado, procedimos a diseñar la arquitectura y distribución de la base de datos.
+
 ----------
 **BASE DE DATOS**
 ----------
