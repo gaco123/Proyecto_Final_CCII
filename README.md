@@ -25,7 +25,7 @@
 ### ¿En qué va a consistir nuestro programa? ¿Por qué elegimos un programa de gestión veterinaria?
 La raíz de este proyecto es buscar una solución a un sistema ineficiente visto en muchas veterinarias, en especial en el aspecto de registro de clientes y mascotas. 
 
-Por ejemplo, después de registrar a una mascota en una veterinaria, lo más común es que a un cliente se le entregue una cartilla en la que se recopilan los datos de sus mascotas. Generalmente datos como: Nombre, información del dueño, fechas de vacunas, fechas de desparasitación, etc. Todo ello registrado en una cartilla que en muchos casos termina siendo desechada o pérdida, **ya sea por el ajetreo de la vida diaria de los dueños o a un sistema de registro de información antiguo y casi obsoleto.**
+Por ejemplo, después de registrar a una mascota en una veterinaria, lo más común es que a un cliente se le entregue una cartilla en la que se recopilan los datos de sus mascotas. Generalmente datos como: Nombre, información del dueño, fechas de vacunas, fechas de desparasitación, etc. Todo ello registrado en una cartilla que en muchos casos termina siendo desechada o pérdida, **ya sea por el ajetreo de la vida diaria de los dueños o a un sistema de registro de información antiguo y casi obsoleto**.
 
 Nosotros buscamos realizar un programa de escritorio que solucione esta problemática, un sistema que permita gestionar y mostrar mediante una interfaz interactiva e intuitiva: **Datos de los clientes, datos de las mascotas de los clientes, registro de vacunas de las mascotas, facturas, citas, y muchas cosas más.**
 ----------------------------------------------
@@ -44,14 +44,14 @@ Teniendo ya una idea del resultado deseado, procedimos a diseñar la arquitectur
 **BASE DE DATOS**
 ----------
 -**Distribución**
-  -Veterinarios
-    Almacena los datos de todos los veterinarios. Será de gran utilidad dentro del login, ya que los veterinarios serán quienes manejen la plataforma
-  -Clientes
-    Contiene la información y datos de contacto sobre cada uno de los clientes.
-  -Mascota
-    Maneja la información de todas las mascotas registradas. Se vincula cada mascota con su dueño con una ID (Así no sobrecargamos la base de datos del cliente)
-  -Citas
-    Almacena las citas por fechas, asigando a cada cita una ID y vincula la información de la mascota y el cliente mediante ID's
+    -Veterinarios
+      Almacena los datos de todos los veterinarios. Será de gran utilidad dentro del login, ya que los veterinarios serán quienes manejen la plataforma
+    -Clientes
+      Contiene la información y datos de contacto sobre cada uno de los clientes.
+    -Mascota
+      Maneja la información de todas las mascotas registradas. Se vincula cada mascota con su dueño con una ID (Así no sobrecargamos la base de datos del cliente)
+    -Citas
+      Almacena las citas por fechas, asigando a cada cita una ID y vincula la información de la mascota y el cliente mediante ID's
 
 ### Diagrama de la base de datos
 ![Vet Arqui](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/Arqui_DB.png)
