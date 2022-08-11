@@ -79,8 +79,9 @@ namespace VetPro {
 			}
 		}
 	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Panel^ panelShowAll;
 	protected:
-	private: System::Windows::Forms::Panel^ panel2;
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::PictureBox^ icon_vet;
 
@@ -120,7 +121,7 @@ namespace VetPro {
 			this->icon_menu = (gcnew System::Windows::Forms::PictureBox());
 			this->icon_vet = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->panelShowAll = (gcnew System::Windows::Forms::Panel());
 			this->logo = (gcnew System::Windows::Forms::PictureBox());
 			this->Menu = (gcnew System::Windows::Forms::Panel());
 			this->clientes = (gcnew System::Windows::Forms::Button());
@@ -134,7 +135,7 @@ namespace VetPro {
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->icon_menu))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->icon_vet))->BeginInit();
-			this->panel2->SuspendLayout();
+			this->panelShowAll->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logo))->BeginInit();
 			this->Menu->SuspendLayout();
 			this->panel5->SuspendLayout();
@@ -193,17 +194,17 @@ namespace VetPro {
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"VetPro";
 			// 
-			// panel2
+			// panelShowAll
 			// 
-			this->panel2->Controls->Add(this->logo);
-			this->panel2->Controls->Add(this->Menu);
-			this->panel2->Controls->Add(this->panel3);
-			this->panel2->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel2->Location = System::Drawing::Point(0, 114);
-			this->panel2->Margin = System::Windows::Forms::Padding(4);
-			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(1685, 724);
-			this->panel2->TabIndex = 1;
+			this->panelShowAll->Controls->Add(this->logo);
+			this->panelShowAll->Controls->Add(this->Menu);
+			this->panelShowAll->Controls->Add(this->panel3);
+			this->panelShowAll->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->panelShowAll->Location = System::Drawing::Point(0, 114);
+			this->panelShowAll->Margin = System::Windows::Forms::Padding(4);
+			this->panelShowAll->Name = L"panelShowAll";
+			this->panelShowAll->Size = System::Drawing::Size(1685, 724);
+			this->panelShowAll->TabIndex = 1;
 			// 
 			// logo
 			// 
@@ -329,7 +330,7 @@ namespace VetPro {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
 			this->ClientSize = System::Drawing::Size(1685, 838);
-			this->Controls->Add(this->panel2);
+			this->Controls->Add(this->panelShowAll);
 			this->Controls->Add(this->panel1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
@@ -341,8 +342,8 @@ namespace VetPro {
 			this->panel1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->icon_menu))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->icon_vet))->EndInit();
-			this->panel2->ResumeLayout(false);
-			this->panel2->PerformLayout();
+			this->panelShowAll->ResumeLayout(false);
+			this->panelShowAll->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logo))->EndInit();
 			this->Menu->ResumeLayout(false);
 			this->panel5->ResumeLayout(false);
@@ -384,6 +385,20 @@ namespace VetPro {
 			comp = true;
 		}
 	}
+	private: System::Windows::Forms::Form^ f_activo = null;
+	private: System::Void abrirfh(System::Windows::Forms::Form^ f_hijo) {
+		if (this->f_activo != null)
+			this->f_activo->Close();
+		this->f_activo = f_hijo;
+		f_hijo->TopLevel = false;
+		f_hijo->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+		f_hijo->Dock = System::Windows::Forms::DockStyle::Fill;
+		this->panelShowAll->Controls->Add(f_hijo);
+		this->panelShowAll->Tag = f_hijo;
+		f_hijo->BringToFront();
+		f_hijo->Show();
+	}
+
 };
 }
 
