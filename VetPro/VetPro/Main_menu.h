@@ -52,7 +52,7 @@ namespace VetPro {
 			MySqlDataAdapter^ da = gcnew MySqlDataAdapter(cursor2);
 			DataTable^ tabla_aux = gcnew DataTable();
 			da->Fill(tabla_aux);
-			array<Byte>^ imagen = gcnew array <Byte>(300000000000000);
+			array<Byte>^ imagen = gcnew array <Byte>(3000);
 			DataRow^ dr = tabla_aux->Rows[0];
 			imagen = (array<Byte>^) dr[5];
 			MemoryStream^ ms = gcnew MemoryStream(imagen);
@@ -258,6 +258,7 @@ namespace VetPro {
 			this->citas->TabIndex = 2;
 			this->citas->Text = L"Citas";
 			this->citas->UseVisualStyleBackColor = true;
+			this->citas->Click += gcnew System::EventHandler(this, &Main_menu::citas_Click);
 			// 
 			// panel5
 			// 
@@ -385,9 +386,9 @@ namespace VetPro {
 			comp = true;
 		}
 	}
-	private: System::Windows::Forms::Form^ f_activo = null;
+	private: System::Windows::Forms::Form^ f_activo = nullptr;
 	private: System::Void abrirfh(System::Windows::Forms::Form^ f_hijo) {
-		if (this->f_activo != null)
+		if (this->f_activo != nullptr)
 			this->f_activo->Close();
 		this->f_activo = f_hijo;
 		f_hijo->TopLevel = false;
@@ -399,6 +400,9 @@ namespace VetPro {
 		f_hijo->Show();
 	}
 
+private: System::Void citas_Click(System::Object^ sender, System::EventArgs^ e) {
+	abrirfh(gcnew VetPro::Cit
+}
 };
 }
 

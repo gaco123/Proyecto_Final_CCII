@@ -124,7 +124,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="addCitas.cpp" />
+    <ClCompile Include="addCliente.cpp" />
+    <ClCompile Include="addMascota.cpp" />
     <ClCompile Include="CircularPictureBox.cpp" />
+    <ClCompile Include="Clientes.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="Main_menu.cpp" />
     <ClCompile Include="Citas.cpp" />
@@ -134,7 +137,16 @@
     <ClInclude Include="addCitas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="addCliente.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="addMascota.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="CircularPictureBox.h" />
+    <ClInclude Include="Clientes.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -152,6 +164,15 @@
   <ItemGroup>
     <EmbeddedResource Include="addCitas.resx">
       <DependentUpon>addCitas.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addCliente.resx">
+      <DependentUpon>addCliente.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addMascota.resx">
+      <DependentUpon>addMascota.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.h</DependentUpon>

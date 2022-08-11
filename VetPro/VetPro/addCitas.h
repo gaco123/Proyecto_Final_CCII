@@ -40,14 +40,25 @@ namespace VetPro {
 
 
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::TextBox^ txt_id;
+
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::TextBox^ txt_nombres;
-	private: System::Windows::Forms::TextBox^ txt_usuario;
-	private: System::Windows::Forms::TextBox^ txt_observaciones;
+	private: System::Windows::Forms::TextBox^ obs;
+	private: System::Windows::Forms::DateTimePicker^ h_select;
+
+
+
+
+
+	private: System::Windows::Forms::DateTimePicker^ f_select;
+
+	private: System::Windows::Forms::ComboBox^ l_clientes;
+
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::ComboBox^ l_mascotas;
+
 
 
 	private:
@@ -63,42 +74,44 @@ namespace VetPro {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->txt_observaciones = (gcnew System::Windows::Forms::TextBox());
+			this->obs = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->txt_id = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->txt_nombres = (gcnew System::Windows::Forms::TextBox());
-			this->txt_usuario = (gcnew System::Windows::Forms::TextBox());
+			this->h_select = (gcnew System::Windows::Forms::DateTimePicker());
+			this->f_select = (gcnew System::Windows::Forms::DateTimePicker());
+			this->l_clientes = (gcnew System::Windows::Forms::ComboBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->l_mascotas = (gcnew System::Windows::Forms::ComboBox());
 			this->SuspendLayout();
 			// 
-			// txt_observaciones
+			// obs
 			// 
-			this->txt_observaciones->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+			this->obs->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->txt_observaciones->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->txt_observaciones->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->txt_observaciones->Location = System::Drawing::Point(102, 361);
-			this->txt_observaciones->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->txt_observaciones->Multiline = true;
-			this->txt_observaciones->Name = L"txt_observaciones";
-			this->txt_observaciones->PasswordChar = '*';
-			this->txt_observaciones->Size = System::Drawing::Size(1487, 150);
-			this->txt_observaciones->TabIndex = 38;
-			this->txt_observaciones->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->txt_observaciones->TextChanged += gcnew System::EventHandler(this, &addCitas::txt_observaciones_TextChanged);
+			this->obs->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->obs->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->obs->Location = System::Drawing::Point(66, 390);
+			this->obs->Margin = System::Windows::Forms::Padding(4);
+			this->obs->Multiline = true;
+			this->obs->Name = L"obs";
+			this->obs->PasswordChar = '*';
+			this->obs->Size = System::Drawing::Size(1487, 150);
+			this->obs->TabIndex = 38;
+			this->obs->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->obs->TextChanged += gcnew System::EventHandler(this, &addCitas::txt_observaciones_TextChanged);
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(95, 302);
+			this->label5->Location = System::Drawing::Point(59, 330);
 			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(279, 42);
@@ -111,40 +124,32 @@ namespace VetPro {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(95, 84);
+			this->label4->Location = System::Drawing::Point(59, 142);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(58, 42);
+			this->label4->Size = System::Drawing::Size(134, 42);
 			this->label4->TabIndex = 37;
-			this->label4->Text = L"Id:";
-			// 
-			// txt_id
-			// 
-			this->txt_id->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->txt_id->Location = System::Drawing::Point(97, 84);
-			this->txt_id->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->txt_id->Name = L"txt_id";
-			this->txt_id->Size = System::Drawing::Size(132, 15);
-			this->txt_id->TabIndex = 36;
-			this->txt_id->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->label4->Text = L"Cliente";
 			// 
 			// label3
 			// 
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 40.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(32, 25);
+			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
+				static_cast<System::Int32>(static_cast<System::Byte>(30)));
+			this->label3->Location = System::Drawing::Point(587, 9);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(169, 34);
+			this->label3->Size = System::Drawing::Size(446, 84);
 			this->label3->TabIndex = 35;
-			this->label3->Text = L"Citas";
+			this->label3->Text = L"NUEVA CITA";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(603, 237);
+			this->label2->Location = System::Drawing::Point(1181, 241);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(133, 42);
@@ -157,12 +162,13 @@ namespace VetPro {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(95, 235);
+			this->label1->Location = System::Drawing::Point(822, 240);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(99, 42);
 			this->label1->TabIndex = 33;
 			this->label1->Text = L"Hora";
+			this->label1->Click += gcnew System::EventHandler(this, &addCitas::label1_Click);
 			// 
 			// button2
 			// 
@@ -171,54 +177,86 @@ namespace VetPro {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Yet R", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
 			this->button2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->button2->Location = System::Drawing::Point(391, 556);
-			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button2->Location = System::Drawing::Point(619, 559);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(381, 84);
 			this->button2->TabIndex = 32;
 			this->button2->Text = L"REGISTRAR";
 			this->button2->UseVisualStyleBackColor = false;
 			// 
-			// txt_nombres
+			// h_select
 			// 
-			this->txt_nombres->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->txt_nombres->Location = System::Drawing::Point(744, 247);
-			this->txt_nombres->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->txt_nombres->Name = L"txt_nombres";
-			this->txt_nombres->PasswordChar = '*';
-			this->txt_nombres->Size = System::Drawing::Size(121, 15);
-			this->txt_nombres->TabIndex = 31;
-			this->txt_nombres->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->txt_nombres->TextChanged += gcnew System::EventHandler(this, &addCitas::txt_nombres_TextChanged);
-			// 
-			// txt_usuario
-			// 
-			this->txt_usuario->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->txt_usuario->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->h_select->CustomFormat = L"hh:mm";
+			this->h_select->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txt_usuario->Location = System::Drawing::Point(202, 247);
-			this->txt_usuario->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->txt_usuario->Name = L"txt_usuario";
-			this->txt_usuario->Size = System::Drawing::Size(231, 27);
-			this->txt_usuario->TabIndex = 30;
-			this->txt_usuario->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->h_select->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->h_select->Location = System::Drawing::Point(928, 243);
+			this->h_select->Name = L"h_select";
+			this->h_select->Size = System::Drawing::Size(232, 41);
+			this->h_select->TabIndex = 40;
+			// 
+			// f_select
+			// 
+			this->f_select->CustomFormat = L"hh:mm";
+			this->f_select->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->f_select->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->f_select->Location = System::Drawing::Point(1321, 243);
+			this->f_select->Name = L"f_select";
+			this->f_select->Size = System::Drawing::Size(232, 41);
+			this->f_select->TabIndex = 41;
+			// 
+			// l_clientes
+			// 
+			this->l_clientes->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->l_clientes->FormattingEnabled = true;
+			this->l_clientes->Location = System::Drawing::Point(236, 145);
+			this->l_clientes->Name = L"l_clientes";
+			this->l_clientes->Size = System::Drawing::Size(1317, 44);
+			this->l_clientes->TabIndex = 42;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(59, 236);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(160, 42);
+			this->label6->TabIndex = 43;
+			this->label6->Text = L"Mascota";
+			// 
+			// l_mascotas
+			// 
+			this->l_mascotas->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->l_mascotas->FormattingEnabled = true;
+			this->l_mascotas->Location = System::Drawing::Point(236, 238);
+			this->l_mascotas->Name = L"l_mascotas";
+			this->l_mascotas->Size = System::Drawing::Size(563, 44);
+			this->l_mascotas->TabIndex = 44;
 			// 
 			// addCitas
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1667, 677);
+			this->Controls->Add(this->l_mascotas);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->l_clientes);
+			this->Controls->Add(this->f_select);
+			this->Controls->Add(this->h_select);
 			this->Controls->Add(this->label5);
-			this->Controls->Add(this->txt_observaciones);
+			this->Controls->Add(this->obs);
 			this->Controls->Add(this->label4);
-			this->Controls->Add(this->txt_id);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button2);
-			this->Controls->Add(this->txt_nombres);
-			this->Controls->Add(this->txt_usuario);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"addCitas";
 			this->Text = L"Citas";
 			this->ResumeLayout(false);
@@ -234,5 +272,7 @@ namespace VetPro {
 	}
 	private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

@@ -26,3 +26,8 @@ D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\V
 D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.Register.resources
 D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.vcxproj.GenerateResource.cache
 D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.vcxproj.CopyComplete
+D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.addCitas.resources
+D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.addCliente.resources
+D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.addMascota.resources
+D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.Clientes.resources
+D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.Citas.resources
