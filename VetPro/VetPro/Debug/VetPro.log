@@ -1,0 +1,21 @@
+﻿  addCitas.cpp
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Main_menu.h(408,25): error C2039: "Citas": no es un miembro de "VetPro"
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Main_menu.h(6): message : vea la declaración de 'VetPro'
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Main_menu.h(408,1): error C2061: error de sintaxis: identificador 'Citas'
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Citas.h(104,11): error C2039: "addCitas": no es un miembro de "VetPro"
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Citas.h(5): message : vea la declaración de 'VetPro'
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Citas.h(104,1): error C2065: 'addCitas': identificador no declarado
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Citas.h(104,21): error C2065: 'nuevo_Ci': identificador no declarado
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Citas.h(104,46): error C2039: "addCitas": no es un miembro de "VetPro"
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Citas.h(5): message : vea la declaración de 'VetPro'
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Citas.h(104,1): error C2061: error de sintaxis: identificador 'addCitas'
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Citas.h(105,3): error C2065: 'nuevo_Ci': identificador no declarado
+  Clientes.cpp
+  Login.cpp
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Login.cpp(7,32): warning C4829: Parámetros posiblemente incorrectos para la función main. Utilice 'int main(Platform::Array<Platform::String^>^ argv)'
+  Main_menu.cpp
+  Citas.cpp
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Main_menu.h(408,25): error C2039: "Citas": no es un miembro de "VetPro"
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Main_menu.h(6): message : vea la declaración de 'VetPro'
+C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\Main_menu.h(408,1): error C2061: error de sintaxis: identificador 'Citas'
+  Generando código...

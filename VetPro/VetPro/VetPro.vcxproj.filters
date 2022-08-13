@@ -23,19 +23,19 @@
     <ClCompile Include="CircularPictureBox.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Citas.cpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClCompile>
-    <ClCompile Include="addCitas.cpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClCompile>
-    <ClCompile Include="Clientes.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="addCliente.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="addMascota.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="addCitas.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Cliente.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Cita.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
   </ItemGroup>
@@ -55,19 +55,19 @@
     <ClInclude Include="CircularPictureBox.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Citas.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="addCitas.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Clientes.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="addCliente.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="addMascota.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Cliente.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Cita.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

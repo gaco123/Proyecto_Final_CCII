@@ -289,9 +289,7 @@ namespace VetPro {
 			this->comboBox1->Location = System::Drawing::Point(261, 139);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(593, 46);
-			this->comboBox1->TabIndex = 74;
-			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &addMascota::comboBox1_SelectedIndexChanged);
-			// 
+			this->comboBox1->TabIndex = 74; 
 			// nace_time
 			// 
 			this->nace_time->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20));
@@ -302,16 +300,15 @@ namespace VetPro {
 			this->nace_time->Name = L"nace_time";
 			this->nace_time->Size = System::Drawing::Size(389, 45);
 			this->nace_time->TabIndex = 75;
-			this->nace_time->ValueChanged += gcnew System::EventHandler(this, &addMascota::nace_time_ValueChanged);
 			// 
 			// VacP_GB
 			// 
 			this->VacP_GB->Controls->Add(this->N_P);
 			this->VacP_GB->Controls->Add(this->S_P);
-			this->VacP_GB->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22));
+			this->VacP_GB->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
 			this->VacP_GB->Location = System::Drawing::Point(60, 589);
 			this->VacP_GB->Name = L"VacP_GB";
-			this->VacP_GB->Size = System::Drawing::Size(360, 128);
+			this->VacP_GB->Size = System::Drawing::Size(298, 128);
 			this->VacP_GB->TabIndex = 76;
 			this->VacP_GB->TabStop = false;
 			this->VacP_GB->Text = L"Vacuna Parvovirus";
@@ -319,9 +316,9 @@ namespace VetPro {
 			// N_P
 			// 
 			this->N_P->AutoSize = true;
-			this->N_P->Location = System::Drawing::Point(237, 58);
+			this->N_P->Location = System::Drawing::Point(201, 58);
 			this->N_P->Name = L"N_P";
-			this->N_P->Size = System::Drawing::Size(87, 46);
+			this->N_P->Size = System::Drawing::Size(75, 40);
 			this->N_P->TabIndex = 1;
 			this->N_P->TabStop = true;
 			this->N_P->Text = L"No";
@@ -332,7 +329,7 @@ namespace VetPro {
 			this->S_P->AutoSize = true;
 			this->S_P->Location = System::Drawing::Point(6, 58);
 			this->S_P->Name = L"S_P";
-			this->S_P->Size = System::Drawing::Size(72, 46);
+			this->S_P->Size = System::Drawing::Size(63, 40);
 			this->S_P->TabIndex = 0;
 			this->S_P->TabStop = true;
 			this->S_P->Text = L"Sí";
@@ -342,10 +339,10 @@ namespace VetPro {
 			// 
 			this->groupBox2->Controls->Add(this->N_D);
 			this->groupBox2->Controls->Add(this->S_D);
-			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22));
+			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
 			this->groupBox2->Location = System::Drawing::Point(478, 589);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(360, 128);
+			this->groupBox2->Size = System::Drawing::Size(281, 128);
 			this->groupBox2->TabIndex = 77;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Vacuna Distemper";
@@ -353,9 +350,9 @@ namespace VetPro {
 			// N_D
 			// 
 			this->N_D->AutoSize = true;
-			this->N_D->Location = System::Drawing::Point(237, 58);
+			this->N_D->Location = System::Drawing::Point(188, 58);
 			this->N_D->Name = L"N_D";
-			this->N_D->Size = System::Drawing::Size(87, 46);
+			this->N_D->Size = System::Drawing::Size(75, 40);
 			this->N_D->TabIndex = 1;
 			this->N_D->TabStop = true;
 			this->N_D->Text = L"No";
@@ -366,7 +363,7 @@ namespace VetPro {
 			this->S_D->AutoSize = true;
 			this->S_D->Location = System::Drawing::Point(6, 58);
 			this->S_D->Name = L"S_D";
-			this->S_D->Size = System::Drawing::Size(72, 46);
+			this->S_D->Size = System::Drawing::Size(63, 40);
 			this->S_D->TabIndex = 0;
 			this->S_D->TabStop = true;
 			this->S_D->Text = L"Sí";
@@ -376,10 +373,10 @@ namespace VetPro {
 			// 
 			this->groupBox3->Controls->Add(this->N_R);
 			this->groupBox3->Controls->Add(this->S_R);
-			this->groupBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22));
+			this->groupBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
 			this->groupBox3->Location = System::Drawing::Point(896, 589);
 			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Size = System::Drawing::Size(284, 128);
+			this->groupBox3->Size = System::Drawing::Size(245, 128);
 			this->groupBox3->TabIndex = 77;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"Vacuna Rabia";
@@ -387,9 +384,9 @@ namespace VetPro {
 			// N_R
 			// 
 			this->N_R->AutoSize = true;
-			this->N_R->Location = System::Drawing::Point(191, 58);
+			this->N_R->Location = System::Drawing::Point(154, 58);
 			this->N_R->Name = L"N_R";
-			this->N_R->Size = System::Drawing::Size(87, 46);
+			this->N_R->Size = System::Drawing::Size(75, 40);
 			this->N_R->TabIndex = 1;
 			this->N_R->TabStop = true;
 			this->N_R->Text = L"No";
@@ -400,7 +397,7 @@ namespace VetPro {
 			this->S_R->AutoSize = true;
 			this->S_R->Location = System::Drawing::Point(6, 58);
 			this->S_R->Name = L"S_R";
-			this->S_R->Size = System::Drawing::Size(72, 46);
+			this->S_R->Size = System::Drawing::Size(63, 40);
 			this->S_R->TabIndex = 0;
 			this->S_R->TabStop = true;
 			this->S_R->Text = L"Sí";
@@ -410,7 +407,7 @@ namespace VetPro {
 			// 
 			this->groupBox4->Controls->Add(this->N_H);
 			this->groupBox4->Controls->Add(this->S_H);
-			this->groupBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22));
+			this->groupBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
 			this->groupBox4->Location = System::Drawing::Point(1238, 589);
 			this->groupBox4->Name = L"groupBox4";
 			this->groupBox4->Size = System::Drawing::Size(360, 128);
@@ -423,18 +420,19 @@ namespace VetPro {
 			this->N_H->AutoSize = true;
 			this->N_H->Location = System::Drawing::Point(221, 58);
 			this->N_H->Name = L"N_H";
-			this->N_H->Size = System::Drawing::Size(87, 46);
+			this->N_H->Size = System::Drawing::Size(75, 40);
 			this->N_H->TabIndex = 1;
 			this->N_H->TabStop = true;
 			this->N_H->Text = L"No";
 			this->N_H->UseVisualStyleBackColor = true;
+	
 			// 
 			// S_H
 			// 
 			this->S_H->AutoSize = true;
 			this->S_H->Location = System::Drawing::Point(6, 58);
 			this->S_H->Name = L"S_H";
-			this->S_H->Size = System::Drawing::Size(72, 46);
+			this->S_H->Size = System::Drawing::Size(63, 40);
 			this->S_H->TabIndex = 0;
 			this->S_H->TabStop = true;
 			this->S_H->Text = L"Sí";
@@ -507,9 +505,5 @@ namespace VetPro {
 		}
 #pragma endregion
 
-private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void nace_time_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-}
 };
 }

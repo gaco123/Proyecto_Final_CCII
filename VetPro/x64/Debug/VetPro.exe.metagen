@@ -1,10 +1,10 @@
   VetPro.addCitas.resources - Embedded, ContainedInManifestFile, 
   VetPro.addCliente.resources - Embedded, ContainedInManifestFile, 
   VetPro.addMascota.resources - Embedded, ContainedInManifestFile, 
-  VetPro.Clientes.resources - Embedded, ContainedInManifestFile, 
+  VetPro.Cita.resources - Embedded, ContainedInManifestFile, 
+  VetPro.Cliente.resources - Embedded, ContainedInManifestFile, 
   VetPro.Login.resources - Embedded, ContainedInManifestFile, 
   VetPro.Main_menu.resources - Embedded, ContainedInManifestFile, 
-  VetPro.Citas.resources - Embedded, ContainedInManifestFile, 
   VetPro.Register.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly VetPro, Version=0.0.*, Culture=Todos los idiomas (todos los países): 
@@ -23,10 +23,6 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Class VetPro.Main_menu: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class VetPro.addCitas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -36,7 +32,10 @@ Class VetPro.addCliente: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
 Class VetPro.addMascota: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-Class VetPro.Clientes: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class VetPro.Cita: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class VetPro.Cliente: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class VetPro.Register: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -44,9 +43,10 @@ Class VetPro.Register: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.String filelocation : Public
-Class VetPro.Login: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class VetPro.Main_menu: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-Class VetPro.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class VetPro.Login: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

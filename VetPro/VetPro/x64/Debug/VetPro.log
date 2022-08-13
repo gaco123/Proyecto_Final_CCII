@@ -1,10 +1,14 @@
-﻿  Citas.cpp
+﻿  addCitas.cpp
+  addCliente.cpp
+  addMascota.cpp
+  CircularPictureBox.cpp
+  Cita.cpp
+  Cliente.cpp
   Login.cpp
-D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\Register.h(328,1): warning C4305: 'argumento': truncamiento de '__int64' a 'int'
-D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\Register.h(328,44): warning C4309: 'argumento': truncamiento de valor constante
-D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\Main_menu.h(404): fatal error C1075: "{": no se encontró ningún token coincidente
+D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\Login.cpp(7,32): warning C4829: Parámetros posiblemente incorrectos para la función main. Utilice 'int main(Platform::Array<Platform::String^>^ argv)'
   Main_menu.cpp
-D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\Main_menu.h(404): fatal error C1075: "{": no se encontró ningún token coincidente
-  addCitas.cpp
-D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\Main_menu.h(404): fatal error C1075: "{": no se encontró ningún token coincidente
+  Register.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
   Generando código...
+  addCitas.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  VetPro.vcxproj -> D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\x64\Debug\VetPro.exe

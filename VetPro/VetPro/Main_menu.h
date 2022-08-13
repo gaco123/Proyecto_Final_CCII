@@ -1,5 +1,7 @@
 #pragma once
 #include "CircularPictureBox.h"
+#include "Cita.h"
+#include "Cliente.h"
 
 namespace VetPro {
 
@@ -244,6 +246,7 @@ namespace VetPro {
 			this->clientes->TabIndex = 3;
 			this->clientes->Text = L"Clientes";
 			this->clientes->UseVisualStyleBackColor = true;
+			this->clientes->Click += gcnew System::EventHandler(this, &Main_menu::clientes_Click);
 			// 
 			// citas
 			// 
@@ -400,9 +403,13 @@ namespace VetPro {
 		f_hijo->Show();
 	}
 
-private: System::Void citas_Click(System::Object^ sender, System::EventArgs^ e) {
-	abrirfh(gcnew VetPro::Cit
-}
+	private: System::Void citas_Click(System::Object^ sender, System::EventArgs^ e) {
+		abrirfh(gcnew VetPro::Cita());
+
+	}
+	private: System::Void clientes_Click(System::Object^ sender, System::EventArgs^ e) {
+		abrirfh(gcnew VetPro::Cliente());
+	}
 };
 }
 

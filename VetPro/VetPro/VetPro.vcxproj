@@ -127,15 +127,18 @@
     <ClCompile Include="addCliente.cpp" />
     <ClCompile Include="addMascota.cpp" />
     <ClCompile Include="CircularPictureBox.cpp" />
-    <ClCompile Include="Clientes.cpp" />
+    <ClCompile Include="Cita.cpp" />
+    <ClCompile Include="Cliente.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="Main_menu.cpp" />
-    <ClCompile Include="Citas.cpp" />
     <ClCompile Include="Register.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="addCitas.h">
       <FileType>CppForm</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent>false</DeploymentContent>
     </ClInclude>
     <ClInclude Include="addCliente.h">
       <FileType>CppForm</FileType>
@@ -144,16 +147,16 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="CircularPictureBox.h" />
-    <ClInclude Include="Clientes.h">
+    <ClInclude Include="Cita.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Cliente.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Main_menu.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="Citas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Register.h">
@@ -171,17 +174,17 @@
     <EmbeddedResource Include="addMascota.resx">
       <DependentUpon>addMascota.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.h</DependentUpon>
+    <EmbeddedResource Include="Cita.resx">
+      <DependentUpon>Cita.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente.resx">
+      <DependentUpon>Cliente.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_menu.resx">
       <DependentUpon>Main_menu.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Citas.resx">
-      <DependentUpon>Citas.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.h</DependentUpon>
