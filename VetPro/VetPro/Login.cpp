@@ -1,5 +1,6 @@
 #include "Login.h"
 
+//Este archivo se encarga de iniciar todo el programa
 using namespace System;
 using namespace System::Windows::Forms;
 
