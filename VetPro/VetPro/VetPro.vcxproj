@@ -126,7 +126,6 @@
     <ClCompile Include="addCitas.cpp" />
     <ClCompile Include="addCliente.cpp" />
     <ClCompile Include="addMascota.cpp" />
-    <ClCompile Include="CircularPictureBox.cpp" />
     <ClCompile Include="Cita.cpp" />
     <ClCompile Include="Cliente.cpp" />
     <ClCompile Include="Login.cpp" />
@@ -146,7 +145,6 @@
     <ClInclude Include="addMascota.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="CircularPictureBox.h" />
     <ClInclude Include="Cita.h">
       <FileType>CppForm</FileType>
     </ClInclude>

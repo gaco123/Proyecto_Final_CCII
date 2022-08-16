@@ -12,31 +12,19 @@ namespace VetPro {
 	using namespace System::Drawing;
 	using namespace MySql::Data::MySqlClient;
 
-	/// <summary>
-	/// Resumen de Login
-	/// </summary>
-	public ref class Login : public System::Windows::Forms::Form
-	{
+	public ref class Login : public System::Windows::Forms::Form {
 	public:
-		Login(void)
-		{
+		Login(void) {
 			InitializeComponent();
-			//
-			//TODO: agregar código de constructor aquí
-			//
 		}
 
 	protected:
-		/// <summary>
-		/// Limpiar los recursos que se estén usando.
-		/// </summary>
-		~Login()
-		{
-			if (components)
-			{
+		~Login() {
+			if (components) {
 				delete components;
 			}
 		}
+
 	private: String^ connectionString = "datasource=localhost; username=root; password=1234; database=veterinaria";
 	private: MySqlConnection^ conn = gcnew MySqlConnection(connectionString);
 	private: System::Windows::Forms::LinkLabel^ regist_label;
@@ -47,27 +35,14 @@ namespace VetPro {
 	private: System::Windows::Forms::Label^ user_label;
 	private: System::Windows::Forms::PictureBox^ login_img;
 
-
-
-
-
-
-
-
-
-	private:
-		/// <summary>
-		/// Variable del diseñador necesaria.
-		/// </summary>
-		System::ComponentModel::Container ^components;
+	private: System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
 		/// Método necesario para admitir el Diseñador. No se puede modificar
 		/// el contenido de este método con el editor de código.
 		/// </summary>
-		void InitializeComponent(void)
-		{
+		void InitializeComponent(void) {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Login::typeid));
 			this->regist_label = (gcnew System::Windows::Forms::LinkLabel());
 			this->entry_button = (gcnew System::Windows::Forms::Button());
@@ -174,12 +149,14 @@ namespace VetPro {
 			this->PerformLayout();
 
 		}
+
 #pragma endregion
-	private: System::Void entry_button_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ sql = "select * from veterinarios where contra = '" + txt_cont->Text + "' and usuario = '" + txt_user->Text + "'";
+	//Comprueba la identidad del usuario y permite le paso hacia la ventana del menu principal
+	private: Void entry_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Abre la base de datos y hace la comprobación de datos correspondiente
+		String^ sql = "SELECT * FROM `veterinaria`.`veterinarios` WHERE contra = '" + txt_cont->Text + "' and usuario = '" + txt_user->Text + "'";
 		MySqlCommand^ cursor = gcnew MySqlCommand(sql, conn);
 		MySqlDataReader^ dataReader;
-
 		try {
 			this->conn->Open();
 			dataReader = cursor->ExecuteReader();
@@ -202,7 +179,9 @@ namespace VetPro {
 		}
 		this->conn->Close();
 	}
-	private: System::Void regist_label_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
+
+	//Abre la ventana de registro
+	private: Void regist_label_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
 		this->Visible = false;
 		VetPro::Register^ nwindow2 = gcnew VetPro::Register;
 		nwindow2->ShowDialog();

@@ -43,3 +43,8 @@ C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\x64\Debug\VetP
 C:\Users\Alejandro\Desktop\Proyecto_Final_CCII-main\VetPro\VetPro\x64\Debug\VetPro.vcxproj.CopyComplete
 D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.Cita.resources
 D:\Carrera\2do Año\III CICLO\CCII\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.Cliente.resources
+F:\Gabriel Documentos\UNSA\Semestre 2022-A\Ciencia de la Computación II\GitHub\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.addCitas.resources
+F:\Gabriel Documentos\UNSA\Semestre 2022-A\Ciencia de la Computación II\GitHub\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.addCliente.resources
+F:\Gabriel Documentos\UNSA\Semestre 2022-A\Ciencia de la Computación II\GitHub\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.addMascota.resources
+F:\Gabriel Documentos\UNSA\Semestre 2022-A\Ciencia de la Computación II\GitHub\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.Cita.resources
+F:\Gabriel Documentos\UNSA\Semestre 2022-A\Ciencia de la Computación II\GitHub\Proyecto_Final_CCII\VetPro\VetPro\x64\Debug\VetPro.Cliente.resources

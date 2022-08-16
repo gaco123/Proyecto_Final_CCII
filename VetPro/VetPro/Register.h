@@ -17,30 +17,16 @@ namespace VetPro {
 	using namespace System::Threading;
 	using namespace System::Threading::Tasks;
 	using namespace MySql::Data::MySqlClient;
-	using namespace System::Threading;
 
-	/// <summary>
-	/// Resumen de Register
-	/// </summary>
-	public ref class Register : public System::Windows::Forms::Form
-	{
+	public ref class Register : public System::Windows::Forms::Form {
 	public:
-		Register(void)
-		{
+		Register(void) {
 			InitializeComponent();
-			//
-			//TODO: agregar código de constructor aquí
-			//
 		}
 
 	protected:
-		/// <summary>
-		/// Limpiar los recursos que se estén usando.
-		/// </summary>
-		~Register()
-		{
-			if (components)
-			{
+		~Register() {
+			if (components) {
 				delete components;
 			}
 		}
@@ -53,7 +39,6 @@ namespace VetPro {
 	private: System::Windows::Forms::Label^ icont_label;
 	private: System::Windows::Forms::Label^ scont_label;
 	private: System::Windows::Forms::PictureBox^ regis_img;
-
 	private: System::Windows::Forms::Button^ regis_button;
 	private: System::Windows::Forms::LinkLabel^ login_label;
 	private: System::Windows::Forms::Label^ label1;
@@ -62,24 +47,15 @@ namespace VetPro {
 	private: System::Windows::Forms::TextBox^ txt_apes;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Button^ btn_suimg;
-	private: System::Windows::Forms::OpenFileDialog^ abre_IMG;
-	protected:
 
-	protected:
-
-	private:
-		/// <summary>
-		/// Variable del diseñador necesaria.
-		/// </summary>
-		System::ComponentModel::Container ^components;
+	private: System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
 		/// Método necesario para admitir el Diseñador. No se puede modificar
 		/// el contenido de este método con el editor de código.
 		/// </summary>
-		void InitializeComponent(void)
-		{
+		void InitializeComponent(void) {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Register::typeid));
 			this->txt_iuser = (gcnew System::Windows::Forms::TextBox());
 			this->txt_icont = (gcnew System::Windows::Forms::TextBox());
@@ -96,7 +72,6 @@ namespace VetPro {
 			this->txt_apes = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->btn_suimg = (gcnew System::Windows::Forms::Button());
-			this->abre_IMG = (gcnew System::Windows::Forms::OpenFileDialog());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->regis_img))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -269,10 +244,6 @@ namespace VetPro {
 			this->btn_suimg->UseVisualStyleBackColor = true;
 			this->btn_suimg->Click += gcnew System::EventHandler(this, &Register::btn_suimg_Click);
 			// 
-			// abre_IMG
-			// 
-			this->abre_IMG->FileName = L"openFileDialog1";
-			// 
 			// Register
 			// 
 			this->AcceptButton = this->regis_button;
@@ -305,43 +276,46 @@ namespace VetPro {
 			this->PerformLayout();
 
 		}
+
 #pragma endregion
+	//Esta funcion evitar que el input txt_iuser y txt_icont esten vacios
 	private: System::Boolean checkTextBox_Empty() {
-		if (System::String::IsNullOrEmpty(txt_iuser->Text) && System::String::IsNullOrEmpty(txt_icont->Text)) {
+		if (System::String::IsNullOrEmpty(txt_iuser->Text) || System::String::IsNullOrEmpty(txt_icont->Text)) {
 			return false;
 		}
 		else {
 			return true;
 		}
 	}
-	public: String^ filelocation;
-	private: System::Void btn_suimg_Click(System::Object^ sender, System::EventArgs^ e) {
 
+	//Bloque encargado de almacenar la ubicacion de un archivo
+	public: String^ filelocation;
+	private: Void btn_suimg_Click(System::Object^ sender, System::EventArgs^ e) {
 		OpenFileDialog^ openFile1 = gcnew OpenFileDialog;
 		openFile1->Filter = "Imagenes|*.png;*.jpeg;*.jpg";
-		if (System::Windows::Forms::DialogResult::OK == openFile1->ShowDialog()){
+		if (System::Windows::Forms::DialogResult::OK == openFile1->ShowDialog()) {
 			filelocation = openFile1->FileName->ToString();
 		}
 	}
 
-	private: System::Void regis_button_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Se encarga de registrar los datos de un usuario(veterinario) en la base de datos
+	private: Void regis_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Pasar una imagen de tipo jpg, jpeg y png a un archivo de tipo blob o longblob
 		array<Byte>^ imagen = gcnew array <Byte>(3000);
 		FileStream^ fst = gcnew FileStream(filelocation,FileMode::Open, FileAccess::Read);
 		BinaryReader^ br = gcnew BinaryReader(fst);
 		imagen = br->ReadBytes((int)fst->Length);  
-
-
-		String^ sql = "insert into `veterinaria`.`veterinarios` (`usuario`,`contra`, `nombres`,`apellidos`,`Foto`) values ('" + txt_iuser->Text + "','" + txt_icont->Text + "', '" + txt_nombres->Text + "', '" + txt_apes->Text + "', @IMG)";
-		MySqlCommand^ cursor = gcnew MySqlCommand(sql, conn);
-
-		try {
-			this->conn->Open();
-			if (txt_icont->Text == txt_scont->Text && checkTextBox_Empty()) {
+		
+		//Este if hace un chequeo para evitar que la contraseñas sean diferentes y que existan campos vacios 
+		if (txt_icont->Text == txt_scont->Text && checkTextBox_Empty()) {
+			//Apertura, ingreso de datos del usuario y cierre de la base de datos
+			String^ sql = "INSERT INTO `veterinaria`.`veterinarios` (`usuario`,`contra`, `nombres`,`apellidos`,`Foto`) VALUE ('" + txt_iuser->Text + "', '" + txt_icont->Text + "', '" + txt_nombres->Text + "', '" + txt_apes->Text + "', @IMG)";
+			MySqlCommand^ cursor = gcnew MySqlCommand(sql, conn);
+			try {
+				this->conn->Open();
 				cursor->Parameters->Add(gcnew MySqlParameter("@IMG", imagen));
 				bool i = cursor->ExecuteNonQuery();
-				
 				if (i) {
-
 					MessageBox::Show(L"Usuario Registrado");
 					this->Visible = false;
 				}
@@ -349,16 +323,18 @@ namespace VetPro {
 					MessageBox::Show(L"Error al registrar el usuario");
 				}
 			}
-			else {
-				MessageBox::Show(L"Error al registrar el usuario");
+			catch (Exception^ x) {
+				MessageBox::Show(x->Message);
 			}
+			this->conn->Close();
 		}
-		catch (Exception^ x) {
-			MessageBox::Show(x->Message);
+		else {
+			MessageBox::Show(L"Error al registrar el usuario");
 		}
-		this->conn->Close();
 	}
-	private: System::Void login_label_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
+
+	//Esta funcion permite a regresar a la ventana del login
+	private: Void login_label_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
 		this->Visible = false;
 	}
 
