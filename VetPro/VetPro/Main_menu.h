@@ -200,7 +200,7 @@ namespace VetPro {
 			// 
 			this->logo->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->logo->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"logo.Image")));
-			this->logo->Location = System::Drawing::Point(454, 87);
+			this->logo->Location = System::Drawing::Point(446, 103);
 			this->logo->Margin = System::Windows::Forms::Padding(2);
 			this->logo->Name = L"logo";
 			this->logo->Size = System::Drawing::Size(609, 390);

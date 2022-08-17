@@ -64,7 +64,7 @@ namespace VetPro {
 				static_cast<System::Int32>(static_cast<System::Byte>(30)));
 			this->n_cita->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold));
 			this->n_cita->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->n_cita->Location = System::Drawing::Point(1030, 289);
+			this->n_cita->Location = System::Drawing::Point(1013, 288);
 			this->n_cita->Margin = System::Windows::Forms::Padding(2);
 			this->n_cita->Name = L"n_cita";
 			this->n_cita->Size = System::Drawing::Size(196, 64);
@@ -90,12 +90,12 @@ namespace VetPro {
 			// 
 			this->tabla_Citas->CellBorderStyle = System::Windows::Forms::TableLayoutPanelCellBorderStyle::Inset;
 			this->tabla_Citas->ColumnCount = 6;
-			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute, 52)));
-			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 12.02186F)));
-			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 17.66849F)));
-			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 41.25683F)));
-			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 15.02732F)));
-			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 14.0255F)));
+			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute, 39)));
+			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 11.9608F)));
+			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 16.02089F)));
+			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 43.3442F)));
+			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 13.72814F)));
+			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 14.94596F)));
 			this->tabla_Citas->Controls->Add(this->txt_id, 0, 0);
 			this->tabla_Citas->Controls->Add(this->txt_hora, 1, 0);
 			this->tabla_Citas->Controls->Add(this->txt_fecha, 2, 0);
@@ -106,7 +106,7 @@ namespace VetPro {
 			this->tabla_Citas->Name = L"tabla_Citas";
 			this->tabla_Citas->RowCount = 1;
 			this->tabla_Citas->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 40)));
-			this->tabla_Citas->Size = System::Drawing::Size(964, 408);
+			this->tabla_Citas->Size = System::Drawing::Size(942, 408);
 			this->tabla_Citas->TabIndex = 41;
 			// 
 			// txt_id
@@ -118,7 +118,7 @@ namespace VetPro {
 			this->txt_id->Location = System::Drawing::Point(5, 5);
 			this->txt_id->Margin = System::Windows::Forms::Padding(3);
 			this->txt_id->Name = L"txt_id";
-			this->txt_id->Size = System::Drawing::Size(46, 404);
+			this->txt_id->Size = System::Drawing::Size(33, 398);
 			this->txt_id->TabIndex = 0;
 			this->txt_id->Text = L"ID";
 			this->txt_id->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -129,10 +129,10 @@ namespace VetPro {
 			this->txt_hora->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->txt_hora->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txt_hora->Location = System::Drawing::Point(59, 5);
+			this->txt_hora->Location = System::Drawing::Point(46, 5);
 			this->txt_hora->Margin = System::Windows::Forms::Padding(3);
 			this->txt_hora->Name = L"txt_hora";
-			this->txt_hora->Size = System::Drawing::Size(101, 404);
+			this->txt_hora->Size = System::Drawing::Size(100, 398);
 			this->txt_hora->TabIndex = 1;
 			this->txt_hora->Text = L"Hora";
 			this->txt_hora->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -143,10 +143,10 @@ namespace VetPro {
 			this->txt_fecha->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->txt_fecha->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txt_fecha->Location = System::Drawing::Point(168, 5);
+			this->txt_fecha->Location = System::Drawing::Point(154, 5);
 			this->txt_fecha->Margin = System::Windows::Forms::Padding(3);
 			this->txt_fecha->Name = L"txt_fecha";
-			this->txt_fecha->Size = System::Drawing::Size(152, 404);
+			this->txt_fecha->Size = System::Drawing::Size(136, 398);
 			this->txt_fecha->TabIndex = 2;
 			this->txt_fecha->Text = L"Fecha";
 			this->txt_fecha->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -157,10 +157,10 @@ namespace VetPro {
 			this->txt_obs->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->txt_obs->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txt_obs->Location = System::Drawing::Point(328, 5);
+			this->txt_obs->Location = System::Drawing::Point(298, 5);
 			this->txt_obs->Margin = System::Windows::Forms::Padding(3);
 			this->txt_obs->Name = L"txt_obs";
-			this->txt_obs->Size = System::Drawing::Size(364, 404);
+			this->txt_obs->Size = System::Drawing::Size(379, 398);
 			this->txt_obs->TabIndex = 3;
 			this->txt_obs->Text = L"Observaciones";
 			this->txt_obs->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -171,10 +171,10 @@ namespace VetPro {
 			this->txt_idcliente->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->txt_idcliente->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txt_idcliente->Location = System::Drawing::Point(700, 5);
+			this->txt_idcliente->Location = System::Drawing::Point(685, 5);
 			this->txt_idcliente->Margin = System::Windows::Forms::Padding(3);
 			this->txt_idcliente->Name = L"txt_idcliente";
-			this->txt_idcliente->Size = System::Drawing::Size(128, 404);
+			this->txt_idcliente->Size = System::Drawing::Size(116, 398);
 			this->txt_idcliente->TabIndex = 4;
 			this->txt_idcliente->Text = L"ID Cliente";
 			this->txt_idcliente->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -185,10 +185,10 @@ namespace VetPro {
 			this->txt_idmascota->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->txt_idmascota->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txt_idmascota->Location = System::Drawing::Point(836, 5);
+			this->txt_idmascota->Location = System::Drawing::Point(809, 5);
 			this->txt_idmascota->Margin = System::Windows::Forms::Padding(3);
 			this->txt_idmascota->Name = L"txt_idmascota";
-			this->txt_idmascota->Size = System::Drawing::Size(123, 404);
+			this->txt_idmascota->Size = System::Drawing::Size(128, 398);
 			this->txt_idmascota->TabIndex = 5;
 			this->txt_idmascota->Text = L"ID Mascota";
 			this->txt_idmascota->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -296,8 +296,8 @@ namespace VetPro {
 		}
 	//Abre la ventana addCitas
 	private: Void n_cita_Click(System::Object^ sender, System::EventArgs^ e) {
-		VetPro::addCitas^ nuevo_Ci = gcnew VetPro::addCitas();
-		nuevo_Ci->ShowDialog();
+		VetPro::addCitas^ nueva_Vent = gcnew VetPro::addCitas();
+		nueva_Vent->ShowDialog();
 	}
 	};
 }

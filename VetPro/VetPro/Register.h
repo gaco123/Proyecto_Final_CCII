@@ -12,6 +12,7 @@ namespace VetPro {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Drawing::Drawing2D;
 	using namespace System::Text;
 	using namespace System::IO;;
 	using namespace System::Threading;
@@ -22,6 +23,23 @@ namespace VetPro {
 	public:
 		Register(void) {
 			InitializeComponent();
+			//Corrige un bug de tamaño con las entradas de texto de este formulario
+			this->txt_iuser->AutoSize = false;
+			this->txt_nombres->AutoSize = false;
+			this->txt_apes-> AutoSize = false;
+			this->txt_icont->AutoSize = false;
+			this->txt_scont->AutoSize = false;
+
+			this->txt_iuser->Size = System::Drawing::Size(215, 22);
+			this->txt_nombres->Size = System::Drawing::Size(215, 22);
+			this->txt_apes->Size = System::Drawing::Size(215, 22);
+			this->txt_icont->Size = System::Drawing::Size(215, 22);
+			this->txt_scont->Size = System::Drawing::Size(215, 22);
+
+			//Cambia la forma de la imagen del usuario de un cuadrado a un elipse
+			GraphicsPath^ ap = gcnew System::Drawing::Drawing2D::GraphicsPath();
+			ap->AddEllipse(this->regis_img->DisplayRectangle);
+			this->regis_img->Region = gcnew System::Drawing::Region(ap);
 		}
 
 	protected:
@@ -80,10 +98,9 @@ namespace VetPro {
 			this->txt_iuser->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->txt_iuser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->txt_iuser->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->txt_iuser->Location = System::Drawing::Point(99, 220);
-			this->txt_iuser->Margin = System::Windows::Forms::Padding(4);
+			this->txt_iuser->Location = System::Drawing::Point(75, 188);
 			this->txt_iuser->Name = L"txt_iuser";
-			this->txt_iuser->Size = System::Drawing::Size(287, 23);
+			this->txt_iuser->Size = System::Drawing::Size(215, 19);
 			this->txt_iuser->TabIndex = 4;
 			// 
 			// txt_icont
@@ -91,11 +108,10 @@ namespace VetPro {
 			this->txt_icont->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->txt_icont->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->txt_icont->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->txt_icont->Location = System::Drawing::Point(99, 385);
-			this->txt_icont->Margin = System::Windows::Forms::Padding(4);
+			this->txt_icont->Location = System::Drawing::Point(75, 322);
 			this->txt_icont->Name = L"txt_icont";
 			this->txt_icont->PasswordChar = '*';
-			this->txt_icont->Size = System::Drawing::Size(287, 23);
+			this->txt_icont->Size = System::Drawing::Size(215, 19);
 			this->txt_icont->TabIndex = 5;
 			// 
 			// txt_scont
@@ -103,21 +119,19 @@ namespace VetPro {
 			this->txt_scont->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->txt_scont->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->txt_scont->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->txt_scont->Location = System::Drawing::Point(99, 440);
-			this->txt_scont->Margin = System::Windows::Forms::Padding(4);
+			this->txt_scont->Location = System::Drawing::Point(75, 367);
 			this->txt_scont->Name = L"txt_scont";
 			this->txt_scont->PasswordChar = '*';
-			this->txt_scont->Size = System::Drawing::Size(287, 23);
+			this->txt_scont->Size = System::Drawing::Size(215, 19);
 			this->txt_scont->TabIndex = 6;
 			// 
 			// user_label
 			// 
 			this->user_label->AutoSize = true;
 			this->user_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->user_label->Location = System::Drawing::Point(95, 194);
-			this->user_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->user_label->Location = System::Drawing::Point(72, 167);
 			this->user_label->Name = L"user_label";
-			this->user_label->Size = System::Drawing::Size(67, 20);
+			this->user_label->Size = System::Drawing::Size(57, 17);
 			this->user_label->TabIndex = 7;
 			this->user_label->Text = L"Usuario";
 			// 
@@ -125,10 +139,9 @@ namespace VetPro {
 			// 
 			this->icont_label->AutoSize = true;
 			this->icont_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->icont_label->Location = System::Drawing::Point(95, 359);
-			this->icont_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->icont_label->Location = System::Drawing::Point(72, 301);
 			this->icont_label->Name = L"icont_label";
-			this->icont_label->Size = System::Drawing::Size(95, 20);
+			this->icont_label->Size = System::Drawing::Size(81, 17);
 			this->icont_label->TabIndex = 8;
 			this->icont_label->Text = L"Contraseña";
 			// 
@@ -136,20 +149,18 @@ namespace VetPro {
 			// 
 			this->scont_label->AutoSize = true;
 			this->scont_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->scont_label->Location = System::Drawing::Point(92, 414);
-			this->scont_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->scont_label->Location = System::Drawing::Point(70, 345);
 			this->scont_label->Name = L"scont_label";
-			this->scont_label->Size = System::Drawing::Size(168, 20);
+			this->scont_label->Size = System::Drawing::Size(143, 17);
 			this->scont_label->TabIndex = 9;
 			this->scont_label->Text = L"Repita su contraseña";
 			// 
 			// regis_img
 			// 
 			this->regis_img->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"regis_img.Image")));
-			this->regis_img->Location = System::Drawing::Point(154, 15);
-			this->regis_img->Margin = System::Windows::Forms::Padding(4);
+			this->regis_img->Location = System::Drawing::Point(115, 12);
 			this->regis_img->Name = L"regis_img";
-			this->regis_img->Size = System::Drawing::Size(177, 185);
+			this->regis_img->Size = System::Drawing::Size(133, 150);
 			this->regis_img->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->regis_img->TabIndex = 10;
 			this->regis_img->TabStop = false;
@@ -157,10 +168,9 @@ namespace VetPro {
 			// regis_button
 			// 
 			this->regis_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			this->regis_button->Location = System::Drawing::Point(116, 610);
-			this->regis_button->Margin = System::Windows::Forms::Padding(4);
+			this->regis_button->Location = System::Drawing::Point(89, 464);
 			this->regis_button->Name = L"regis_button";
-			this->regis_button->Size = System::Drawing::Size(227, 48);
+			this->regis_button->Size = System::Drawing::Size(170, 39);
 			this->regis_button->TabIndex = 11;
 			this->regis_button->Text = L"Registrarse";
 			this->regis_button->UseVisualStyleBackColor = true;
@@ -170,10 +180,9 @@ namespace VetPro {
 			// 
 			this->login_label->AutoSize = true;
 			this->login_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
-			this->login_label->Location = System::Drawing::Point(169, 679);
-			this->login_label->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->login_label->Location = System::Drawing::Point(129, 520);
 			this->login_label->Name = L"login_label";
-			this->login_label->Size = System::Drawing::Size(121, 18);
+			this->login_label->Size = System::Drawing::Size(102, 15);
 			this->login_label->TabIndex = 12;
 			this->login_label->TabStop = true;
 			this->login_label->Text = L"Regresar a Login";
@@ -183,10 +192,9 @@ namespace VetPro {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->label1->Location = System::Drawing::Point(92, 249);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(70, 211);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(77, 20);
+			this->label1->Size = System::Drawing::Size(65, 17);
 			this->label1->TabIndex = 14;
 			this->label1->Text = L"Nombres";
 			// 
@@ -195,20 +203,18 @@ namespace VetPro {
 			this->txt_nombres->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->txt_nombres->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->txt_nombres->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->txt_nombres->Location = System::Drawing::Point(99, 275);
-			this->txt_nombres->Margin = System::Windows::Forms::Padding(4);
+			this->txt_nombres->Location = System::Drawing::Point(75, 232);
 			this->txt_nombres->Name = L"txt_nombres";
-			this->txt_nombres->Size = System::Drawing::Size(287, 23);
+			this->txt_nombres->Size = System::Drawing::Size(215, 19);
 			this->txt_nombres->TabIndex = 13;
 			// 
 			// Apellidos
 			// 
 			this->Apellidos->AutoSize = true;
 			this->Apellidos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->Apellidos->Location = System::Drawing::Point(95, 304);
-			this->Apellidos->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->Apellidos->Location = System::Drawing::Point(72, 256);
 			this->Apellidos->Name = L"Apellidos";
-			this->Apellidos->Size = System::Drawing::Size(77, 20);
+			this->Apellidos->Size = System::Drawing::Size(65, 17);
 			this->Apellidos->TabIndex = 16;
 			this->Apellidos->Text = L"Apellidos";
 			// 
@@ -217,28 +223,28 @@ namespace VetPro {
 			this->txt_apes->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->txt_apes->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->txt_apes->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->txt_apes->Location = System::Drawing::Point(99, 330);
-			this->txt_apes->Margin = System::Windows::Forms::Padding(4);
+			this->txt_apes->Location = System::Drawing::Point(75, 277);
 			this->txt_apes->Name = L"txt_apes";
-			this->txt_apes->Size = System::Drawing::Size(287, 23);
+			this->txt_apes->Size = System::Drawing::Size(215, 19);
 			this->txt_apes->TabIndex = 15;
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->label2->Location = System::Drawing::Point(92, 541);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Location = System::Drawing::Point(72, 420);
+			this->label2->Margin = System::Windows::Forms::Padding(0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(93, 20);
+			this->label2->Size = System::Drawing::Size(81, 17);
 			this->label2->TabIndex = 17;
 			this->label2->Text = L"Subir foto...";
 			// 
 			// btn_suimg
 			// 
-			this->btn_suimg->Location = System::Drawing::Point(222, 540);
+			this->btn_suimg->Location = System::Drawing::Point(167, 419);
+			this->btn_suimg->Margin = System::Windows::Forms::Padding(0);
 			this->btn_suimg->Name = L"btn_suimg";
-			this->btn_suimg->Size = System::Drawing::Size(164, 23);
+			this->btn_suimg->Size = System::Drawing::Size(123, 19);
 			this->btn_suimg->TabIndex = 18;
 			this->btn_suimg->Text = L"Seleccionar archivo...";
 			this->btn_suimg->UseVisualStyleBackColor = true;
@@ -247,9 +253,9 @@ namespace VetPro {
 			// Register
 			// 
 			this->AcceptButton = this->regis_button;
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(480, 730);
+			this->ClientSize = System::Drawing::Size(360, 552);
 			this->Controls->Add(this->btn_suimg);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->Apellidos);
@@ -267,7 +273,6 @@ namespace VetPro {
 			this->Controls->Add(this->txt_iuser);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Register";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Registrarse";
@@ -288,24 +293,30 @@ namespace VetPro {
 		}
 	}
 
-	//Bloque encargado de almacenar la ubicacion de un archivo
-	public: String^ filelocation;
+	//Bloque encargado de almacenar la ubicacion de un archivo y actualizar la imagen de regis_img
+	private: String^ filelocation;
+	private: array<Byte>^ imagen;
+	private: FileStream^ fst;
+	private: BinaryReader^ br;
 	private: Void btn_suimg_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Almacenar la ubicacion de la imagen
 		OpenFileDialog^ openFile1 = gcnew OpenFileDialog;
 		openFile1->Filter = "Imagenes|*.png;*.jpeg;*.jpg";
 		if (System::Windows::Forms::DialogResult::OK == openFile1->ShowDialog()) {
 			filelocation = openFile1->FileName->ToString();
 		}
+
+		//Actualiza la imagen de masc_Picture
+		imagen = gcnew array <Byte>(3000);
+		FileStream^ fst = gcnew FileStream(filelocation, FileMode::Open, FileAccess::Read);
+		BinaryReader^ br = gcnew BinaryReader(fst);
+		imagen = br->ReadBytes((int)fst->Length);
+		MemoryStream^ ms = gcnew MemoryStream(imagen);
+		this->regis_img->Image = Drawing::Image::FromStream(ms);
 	}
 
 	//Se encarga de registrar los datos de un usuario(veterinario) en la base de datos
 	private: Void regis_button_Click(System::Object^ sender, System::EventArgs^ e) {
-		//Pasar una imagen de tipo jpg, jpeg y png a un archivo de tipo blob o longblob
-		array<Byte>^ imagen = gcnew array <Byte>(3000);
-		FileStream^ fst = gcnew FileStream(filelocation,FileMode::Open, FileAccess::Read);
-		BinaryReader^ br = gcnew BinaryReader(fst);
-		imagen = br->ReadBytes((int)fst->Length);  
-		
 		//Este if hace un chequeo para evitar que la contraseñas sean diferentes y que existan campos vacios 
 		if (txt_icont->Text == txt_scont->Text && checkTextBox_Empty()) {
 			//Apertura, ingreso de datos del usuario y cierre de la base de datos
@@ -337,6 +348,5 @@ namespace VetPro {
 	private: Void login_label_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
 		this->Visible = false;
 	}
-
 };
 }

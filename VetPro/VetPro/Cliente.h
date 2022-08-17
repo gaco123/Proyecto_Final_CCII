@@ -50,13 +50,13 @@ namespace VetPro {
 			this->n_clie = (gcnew System::Windows::Forms::Button());
 			this->n_masco = (gcnew System::Windows::Forms::Button());
 			this->tabla_Clientes = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->txt_cumple = (gcnew System::Windows::Forms::Label());
-			this->txt_telefono = (gcnew System::Windows::Forms::Label());
-			this->txt_correo = (gcnew System::Windows::Forms::Label());
-			this->txt_foto = (gcnew System::Windows::Forms::Label());
-			this->txt_apellidos = (gcnew System::Windows::Forms::Label());
-			this->txt_nombres = (gcnew System::Windows::Forms::Label());
 			this->txt_id = (gcnew System::Windows::Forms::Label());
+			this->txt_nombres = (gcnew System::Windows::Forms::Label());
+			this->txt_apellidos = (gcnew System::Windows::Forms::Label());
+			this->txt_foto = (gcnew System::Windows::Forms::Label());
+			this->txt_correo = (gcnew System::Windows::Forms::Label());
+			this->txt_telefono = (gcnew System::Windows::Forms::Label());
+			this->txt_cumple = (gcnew System::Windows::Forms::Label());
 			this->tabla_Clientes->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -78,7 +78,7 @@ namespace VetPro {
 				static_cast<System::Int32>(static_cast<System::Byte>(30)));
 			this->n_clie->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold));
 			this->n_clie->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->n_clie->Location = System::Drawing::Point(1016, 125);
+			this->n_clie->Location = System::Drawing::Point(1005, 365);
 			this->n_clie->Margin = System::Windows::Forms::Padding(2);
 			this->n_clie->Name = L"n_clie";
 			this->n_clie->Size = System::Drawing::Size(196, 64);
@@ -93,7 +93,7 @@ namespace VetPro {
 				static_cast<System::Int32>(static_cast<System::Byte>(30)));
 			this->n_masco->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold));
 			this->n_masco->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->n_masco->Location = System::Drawing::Point(1016, 38);
+			this->n_masco->Location = System::Drawing::Point(1005, 217);
 			this->n_masco->Margin = System::Windows::Forms::Padding(2);
 			this->n_masco->Name = L"n_masco";
 			this->n_masco->Size = System::Drawing::Size(196, 64);
@@ -107,19 +107,19 @@ namespace VetPro {
 			this->tabla_Clientes->CellBorderStyle = System::Windows::Forms::TableLayoutPanelCellBorderStyle::Inset;
 			this->tabla_Clientes->ColumnCount = 7;
 			this->tabla_Clientes->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				50)));
+				41)));
 			this->tabla_Clientes->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				19.4508F)));
+				18.72977F)));
 			this->tabla_Clientes->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				20.36614F)));
+				20.19656F)));
 			this->tabla_Clientes->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				8.581236F)));
+				9.026396F)));
 			this->tabla_Clientes->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				18.42106F)));
+				18.31112F)));
 			this->tabla_Clientes->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				18.0778F)));
+				17.03732F)));
 			this->tabla_Clientes->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				15.10297F)));
+				16.69883F)));
 			this->tabla_Clientes->Controls->Add(this->txt_id, 0, 0);
 			this->tabla_Clientes->Controls->Add(this->txt_nombres, 1, 0);
 			this->tabla_Clientes->Controls->Add(this->txt_apellidos, 2, 0);
@@ -130,93 +130,9 @@ namespace VetPro {
 			this->tabla_Clientes->Location = System::Drawing::Point(46, 112);
 			this->tabla_Clientes->Name = L"tabla_Clientes";
 			this->tabla_Clientes->RowCount = 1;
-			this->tabla_Clientes->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 40)));
-			this->tabla_Clientes->Size = System::Drawing::Size(926, 403);
+			this->tabla_Clientes->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 403)));
+			this->tabla_Clientes->Size = System::Drawing::Size(918, 403);
 			this->tabla_Clientes->TabIndex = 40;
-			// 
-			// txt_cumple
-			// 
-			this->txt_cumple->AutoSize = true;
-			this->txt_cumple->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->txt_cumple->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->txt_cumple->Location = System::Drawing::Point(795, 5);
-			this->txt_cumple->Margin = System::Windows::Forms::Padding(3);
-			this->txt_cumple->Name = L"txt_cumple";
-			this->txt_cumple->Size = System::Drawing::Size(126, 34);
-			this->txt_cumple->TabIndex = 6;
-			this->txt_cumple->Text = L"Cumpleaños";
-			this->txt_cumple->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// txt_telefono
-			// 
-			this->txt_telefono->AutoSize = true;
-			this->txt_telefono->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->txt_telefono->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->txt_telefono->Location = System::Drawing::Point(638, 5);
-			this->txt_telefono->Margin = System::Windows::Forms::Padding(3);
-			this->txt_telefono->Name = L"txt_telefono";
-			this->txt_telefono->Size = System::Drawing::Size(149, 34);
-			this->txt_telefono->TabIndex = 5;
-			this->txt_telefono->Text = L"Telefono";
-			this->txt_telefono->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// txt_correo
-			// 
-			this->txt_correo->AutoSize = true;
-			this->txt_correo->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->txt_correo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->txt_correo->Location = System::Drawing::Point(478, 5);
-			this->txt_correo->Margin = System::Windows::Forms::Padding(3);
-			this->txt_correo->Name = L"txt_correo";
-			this->txt_correo->Size = System::Drawing::Size(152, 34);
-			this->txt_correo->TabIndex = 4;
-			this->txt_correo->Text = L"Correo";
-			this->txt_correo->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// txt_foto
-			// 
-			this->txt_foto->AutoSize = true;
-			this->txt_foto->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->txt_foto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->txt_foto->Location = System::Drawing::Point(403, 5);
-			this->txt_foto->Margin = System::Windows::Forms::Padding(3);
-			this->txt_foto->Name = L"txt_foto";
-			this->txt_foto->Size = System::Drawing::Size(67, 34);
-			this->txt_foto->TabIndex = 3;
-			this->txt_foto->Text = L"Foto";
-			this->txt_foto->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// txt_apellidos
-			// 
-			this->txt_apellidos->AutoSize = true;
-			this->txt_apellidos->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->txt_apellidos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->txt_apellidos->Location = System::Drawing::Point(226, 5);
-			this->txt_apellidos->Margin = System::Windows::Forms::Padding(3);
-			this->txt_apellidos->Name = L"txt_apellidos";
-			this->txt_apellidos->Size = System::Drawing::Size(169, 34);
-			this->txt_apellidos->TabIndex = 2;
-			this->txt_apellidos->Text = L"Apellidos";
-			this->txt_apellidos->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// txt_nombres
-			// 
-			this->txt_nombres->AutoSize = true;
-			this->txt_nombres->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->txt_nombres->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->txt_nombres->Location = System::Drawing::Point(57, 5);
-			this->txt_nombres->Margin = System::Windows::Forms::Padding(3);
-			this->txt_nombres->Name = L"txt_nombres";
-			this->txt_nombres->Size = System::Drawing::Size(161, 34);
-			this->txt_nombres->TabIndex = 1;
-			this->txt_nombres->Text = L"Nombres";
-			this->txt_nombres->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// txt_id
 			// 
@@ -227,10 +143,94 @@ namespace VetPro {
 			this->txt_id->Location = System::Drawing::Point(5, 5);
 			this->txt_id->Margin = System::Windows::Forms::Padding(3);
 			this->txt_id->Name = L"txt_id";
-			this->txt_id->Size = System::Drawing::Size(44, 34);
+			this->txt_id->Size = System::Drawing::Size(35, 397);
 			this->txt_id->TabIndex = 0;
 			this->txt_id->Text = L"ID";
 			this->txt_id->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// txt_nombres
+			// 
+			this->txt_nombres->AutoSize = true;
+			this->txt_nombres->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->txt_nombres->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->txt_nombres->Location = System::Drawing::Point(48, 5);
+			this->txt_nombres->Margin = System::Windows::Forms::Padding(3);
+			this->txt_nombres->Name = L"txt_nombres";
+			this->txt_nombres->Size = System::Drawing::Size(155, 397);
+			this->txt_nombres->TabIndex = 1;
+			this->txt_nombres->Text = L"Nombres";
+			this->txt_nombres->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// txt_apellidos
+			// 
+			this->txt_apellidos->AutoSize = true;
+			this->txt_apellidos->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->txt_apellidos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->txt_apellidos->Location = System::Drawing::Point(211, 5);
+			this->txt_apellidos->Margin = System::Windows::Forms::Padding(3);
+			this->txt_apellidos->Name = L"txt_apellidos";
+			this->txt_apellidos->Size = System::Drawing::Size(167, 397);
+			this->txt_apellidos->TabIndex = 2;
+			this->txt_apellidos->Text = L"Apellidos";
+			this->txt_apellidos->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// txt_foto
+			// 
+			this->txt_foto->AutoSize = true;
+			this->txt_foto->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->txt_foto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->txt_foto->Location = System::Drawing::Point(386, 5);
+			this->txt_foto->Margin = System::Windows::Forms::Padding(3);
+			this->txt_foto->Name = L"txt_foto";
+			this->txt_foto->Size = System::Drawing::Size(71, 397);
+			this->txt_foto->TabIndex = 3;
+			this->txt_foto->Text = L"Foto";
+			this->txt_foto->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// txt_correo
+			// 
+			this->txt_correo->AutoSize = true;
+			this->txt_correo->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->txt_correo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->txt_correo->Location = System::Drawing::Point(465, 5);
+			this->txt_correo->Margin = System::Windows::Forms::Padding(3);
+			this->txt_correo->Name = L"txt_correo";
+			this->txt_correo->Size = System::Drawing::Size(151, 397);
+			this->txt_correo->TabIndex = 4;
+			this->txt_correo->Text = L"Correo";
+			this->txt_correo->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// txt_telefono
+			// 
+			this->txt_telefono->AutoSize = true;
+			this->txt_telefono->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->txt_telefono->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->txt_telefono->Location = System::Drawing::Point(624, 5);
+			this->txt_telefono->Margin = System::Windows::Forms::Padding(3);
+			this->txt_telefono->Name = L"txt_telefono";
+			this->txt_telefono->Size = System::Drawing::Size(140, 397);
+			this->txt_telefono->TabIndex = 5;
+			this->txt_telefono->Text = L"Telefono";
+			this->txt_telefono->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// txt_cumple
+			// 
+			this->txt_cumple->AutoSize = true;
+			this->txt_cumple->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->txt_cumple->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->txt_cumple->Location = System::Drawing::Point(772, 5);
+			this->txt_cumple->Margin = System::Windows::Forms::Padding(3);
+			this->txt_cumple->Name = L"txt_cumple";
+			this->txt_cumple->Size = System::Drawing::Size(141, 397);
+			this->txt_cumple->TabIndex = 6;
+			this->txt_cumple->Text = L"Cumpleaños";
+			this->txt_cumple->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// Cliente
 			// 
@@ -359,11 +359,13 @@ namespace VetPro {
 		}
 	//Abre la ventana addCliente
 	private: Void n_clie_Click(System::Object^ sender, System::EventArgs^ e) {
-		VetPro::addCliente^ nuevo_Ci = gcnew VetPro::addCliente();
+		VetPro::addCliente^ nueva_Vent = gcnew VetPro::addCliente();
+		nueva_Vent->ShowDialog();
 	}
 	//Abre la ventana addMascota
 	private: Void n_masco_Click(System::Object^ sender, System::EventArgs^ e) {
-		VetPro::addMascota^ nuevo_Ci = gcnew VetPro::addMascota();
+		VetPro::addMascota^ nueva_Vent = gcnew VetPro::addMascota();
+		nueva_Vent->ShowDialog();
 	}
 };
 }

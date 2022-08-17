@@ -16,6 +16,12 @@ namespace VetPro {
 	public:
 		Login(void) {
 			InitializeComponent();
+			//Corrige un bug de tamaño con las entradas de texto para usuario y contraseña
+			this->txt_user->AutoSize = false;
+			this->txt_cont->AutoSize = false;
+
+			this->txt_user->Size = System::Drawing::Size(215, 22);
+			this->txt_cont->Size = System::Drawing::Size(215, 22);
 		}
 
 	protected:
@@ -165,8 +171,8 @@ namespace VetPro {
 				String^ nom = dataReader["nombres"]->ToString();
 				String^ usu = dataReader["usuario"]->ToString();
 				MessageBox::Show("Ingresó Dr. " + nom);
-				VetPro::Main_menu^ nwindow1 = gcnew VetPro::Main_menu(usu);
-				nwindow1->ShowDialog();
+				VetPro::Main_menu^ nueva_Vent = gcnew VetPro::Main_menu(usu);
+				nueva_Vent->ShowDialog();
 				this->Visible = true;
 				this->Close();
 			}
@@ -183,8 +189,8 @@ namespace VetPro {
 	//Abre la ventana de registro
 	private: Void regist_label_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
 		this->Visible = false;
-		VetPro::Register^ nwindow2 = gcnew VetPro::Register;
-		nwindow2->ShowDialog();
+		VetPro::Register^ nueva_Vent = gcnew VetPro::Register;
+		nueva_Vent->ShowDialog();
 		this->CenterToScreen();
 		this->Visible = true;
 	}

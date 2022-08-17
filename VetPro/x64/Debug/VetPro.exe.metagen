@@ -41,8 +41,6 @@ Class VetPro.Cliente: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
 Class VetPro.Register: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Fields:
-    System.String filelocation : Public
 Class VetPro.Main_menu: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
