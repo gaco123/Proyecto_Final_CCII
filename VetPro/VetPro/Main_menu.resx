@@ -398,9 +398,6 @@
         McYYY4wxxhhjZp2f+qn/AxkhQbyV91JAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="Menu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="logo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAmEAAAGGCAYAAAAzXFbsAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAb
@@ -1384,6 +1381,30 @@
   <metadata name="Menu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="bt_whiteline_2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAAAECAYAAAB4FpoOAAAABGdBTUEAALGPC/xhBQAAAB5JREFUOE9j
+        +D8KBhUYjZBBBkYjZJCB0QgZVOD/fwAWYjobUpqVfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bt_whiteline_1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAAAECAYAAAB4FpoOAAAABGdBTUEAALGPC/xhBQAAAB5JREFUOE9j
+        +D8KBhUYjZBBBkYjZJCB0QgZVOD/fwAWYjobUpqVfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="ft_whiteline_1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAAAECAYAAAB4FpoOAAAABGdBTUEAALGPC/xhBQAAAB5JREFUOE9j
+        +D8KBhUYjZBBBkYjZJCB0QgZVOD/fwAWYjobUpqVfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="ft_whiteline_2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAAAECAYAAAB4FpoOAAAABGdBTUEAALGPC/xhBQAAAB5JREFUOE9j
+        +D8KBhUYjZBBBkYjZJCB0QgZVOD/fwAWYjobUpqVfwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="Foto_usu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEASABIAAD/4X+uRXhpZgAATU0AKgAAAAgADgEAAAMAAAABC7gAAAEBAAMAAAAB
@@ -29963,6 +29984,12 @@
         RqANz7Q0v3x0puPm64P8qrRl/K+Y5JOM+9E7PCFJ6kce+KANOIhjweauzDER29q5+zvGdtx+93Fbhfeu
         SMZoAokEqdw5Pb2q3bsYNr9P8+tNPq/5+maqXMkiR+Wh3NjgeooANUvY3nUeZhTknuDWf9ptv+eorm5Z
         Lkxvzg7uB1PuKp+ZfejUAf/Z
+</value>
+  </data>
+  <data name="msg_whiteline_1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAAAECAYAAAB4FpoOAAAABGdBTUEAALGPC/xhBQAAAB5JREFUOE9j
+        +D8KBhUYjZBBBkYjZJCB0QgZVOD/fwAWYjobUpqVfwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

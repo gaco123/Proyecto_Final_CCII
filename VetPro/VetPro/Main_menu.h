@@ -106,6 +106,13 @@ namespace VetPro {
 	private: System::Windows::Forms::Button^ citas;
 	private: System::Windows::Forms::PictureBox^ logo;
 	private: System::Windows::Forms::PictureBox^ Foto_usu;
+	private: System::Windows::Forms::PictureBox^ bt_whiteline_2;
+
+	private: System::Windows::Forms::PictureBox^ bt_whiteline_1;
+	private: System::Windows::Forms::PictureBox^ ft_whiteline_1;
+	private: System::Windows::Forms::PictureBox^ ft_whiteline_2;
+	private: System::Windows::Forms::PictureBox^ msg_whiteline_1;
+
 
 	private: System::ComponentModel::Container ^components;
 
@@ -123,21 +130,31 @@ namespace VetPro {
 			this->panelShowAll = (gcnew System::Windows::Forms::Panel());
 			this->logo = (gcnew System::Windows::Forms::PictureBox());
 			this->Menu = (gcnew System::Windows::Forms::Panel());
+			this->bt_whiteline_2 = (gcnew System::Windows::Forms::PictureBox());
 			this->clientes = (gcnew System::Windows::Forms::Button());
+			this->bt_whiteline_1 = (gcnew System::Windows::Forms::PictureBox());
 			this->citas = (gcnew System::Windows::Forms::Button());
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			this->Foto_usu = (gcnew System::Windows::Forms::PictureBox());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->name = (gcnew System::Windows::Forms::Label());
+			this->ft_whiteline_2 = (gcnew System::Windows::Forms::PictureBox());
+			this->ft_whiteline_1 = (gcnew System::Windows::Forms::PictureBox());
+			this->msg_whiteline_1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->icon_menu))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->icon_vet))->BeginInit();
 			this->panelShowAll->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logo))->BeginInit();
 			this->Menu->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bt_whiteline_2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bt_whiteline_1))->BeginInit();
 			this->panel5->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Foto_usu))->BeginInit();
 			this->panel4->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ft_whiteline_2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ft_whiteline_1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->msg_whiteline_1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -212,7 +229,9 @@ namespace VetPro {
 			// 
 			this->Menu->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
 				static_cast<System::Int32>(static_cast<System::Byte>(30)));
+			this->Menu->Controls->Add(this->bt_whiteline_2);
 			this->Menu->Controls->Add(this->clientes);
+			this->Menu->Controls->Add(this->bt_whiteline_1);
 			this->Menu->Controls->Add(this->citas);
 			this->Menu->Controls->Add(this->panel5);
 			this->Menu->Controls->Add(this->panel4);
@@ -224,6 +243,17 @@ namespace VetPro {
 			this->Menu->Size = System::Drawing::Size(257, 588);
 			this->Menu->TabIndex = 1;
 			// 
+			// bt_whiteline_2
+			// 
+			this->bt_whiteline_2->Dock = System::Windows::Forms::DockStyle::Top;
+			this->bt_whiteline_2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bt_whiteline_2.Image")));
+			this->bt_whiteline_2->Location = System::Drawing::Point(0, 563);
+			this->bt_whiteline_2->Name = L"bt_whiteline_2";
+			this->bt_whiteline_2->Size = System::Drawing::Size(257, 2);
+			this->bt_whiteline_2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->bt_whiteline_2->TabIndex = 5;
+			this->bt_whiteline_2->TabStop = false;
+			// 
 			// clientes
 			// 
 			this->clientes->Dock = System::Windows::Forms::DockStyle::Top;
@@ -233,7 +263,7 @@ namespace VetPro {
 			this->clientes->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
 			this->clientes->ForeColor = System::Drawing::Color::White;
-			this->clientes->Location = System::Drawing::Point(0, 493);
+			this->clientes->Location = System::Drawing::Point(0, 495);
 			this->clientes->Margin = System::Windows::Forms::Padding(0);
 			this->clientes->Name = L"clientes";
 			this->clientes->Size = System::Drawing::Size(257, 68);
@@ -241,6 +271,17 @@ namespace VetPro {
 			this->clientes->Text = L"Clientes";
 			this->clientes->UseVisualStyleBackColor = true;
 			this->clientes->Click += gcnew System::EventHandler(this, &Main_menu::clientes_Click);
+			// 
+			// bt_whiteline_1
+			// 
+			this->bt_whiteline_1->Dock = System::Windows::Forms::DockStyle::Top;
+			this->bt_whiteline_1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bt_whiteline_1.Image")));
+			this->bt_whiteline_1->Location = System::Drawing::Point(0, 493);
+			this->bt_whiteline_1->Name = L"bt_whiteline_1";
+			this->bt_whiteline_1->Size = System::Drawing::Size(257, 2);
+			this->bt_whiteline_1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->bt_whiteline_1->TabIndex = 4;
+			this->bt_whiteline_1->TabStop = false;
 			// 
 			// citas
 			// 
@@ -263,6 +304,8 @@ namespace VetPro {
 			// 
 			// panel5
 			// 
+			this->panel5->Controls->Add(this->ft_whiteline_1);
+			this->panel5->Controls->Add(this->ft_whiteline_2);
 			this->panel5->Controls->Add(this->Foto_usu);
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel5->Location = System::Drawing::Point(0, 115);
@@ -285,6 +328,7 @@ namespace VetPro {
 			// 
 			// panel4
 			// 
+			this->panel4->Controls->Add(this->msg_whiteline_1);
 			this->panel4->Controls->Add(this->name);
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel4->Location = System::Drawing::Point(0, 0);
@@ -306,6 +350,39 @@ namespace VetPro {
 			this->name->TabIndex = 1;
 			this->name->Text = L"Bienvenido\n Panchito";
 			this->name->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// ft_whiteline_2
+			// 
+			this->ft_whiteline_2->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->ft_whiteline_2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ft_whiteline_2.Image")));
+			this->ft_whiteline_2->Location = System::Drawing::Point(0, 308);
+			this->ft_whiteline_2->Name = L"ft_whiteline_2";
+			this->ft_whiteline_2->Size = System::Drawing::Size(257, 2);
+			this->ft_whiteline_2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->ft_whiteline_2->TabIndex = 5;
+			this->ft_whiteline_2->TabStop = false;
+			// 
+			// ft_whiteline_1
+			// 
+			this->ft_whiteline_1->Dock = System::Windows::Forms::DockStyle::Top;
+			this->ft_whiteline_1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ft_whiteline_1.Image")));
+			this->ft_whiteline_1->Location = System::Drawing::Point(0, 0);
+			this->ft_whiteline_1->Name = L"ft_whiteline_1";
+			this->ft_whiteline_1->Size = System::Drawing::Size(257, 2);
+			this->ft_whiteline_1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->ft_whiteline_1->TabIndex = 6;
+			this->ft_whiteline_1->TabStop = false;
+			// 
+			// msg_whiteline_1
+			// 
+			this->msg_whiteline_1->Dock = System::Windows::Forms::DockStyle::Top;
+			this->msg_whiteline_1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"msg_whiteline_1.Image")));
+			this->msg_whiteline_1->Location = System::Drawing::Point(0, 0);
+			this->msg_whiteline_1->Name = L"msg_whiteline_1";
+			this->msg_whiteline_1->Size = System::Drawing::Size(257, 2);
+			this->msg_whiteline_1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->msg_whiteline_1->TabIndex = 5;
+			this->msg_whiteline_1->TabStop = false;
 			// 
 			// Main_menu
 			// 
@@ -329,9 +406,14 @@ namespace VetPro {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logo))->EndInit();
 			this->Menu->ResumeLayout(false);
 			this->Menu->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bt_whiteline_2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bt_whiteline_1))->EndInit();
 			this->panel5->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Foto_usu))->EndInit();
 			this->panel4->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ft_whiteline_2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ft_whiteline_1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->msg_whiteline_1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -355,6 +437,11 @@ namespace VetPro {
 				x += 2;
 			}
 		}
+		this->msg_whiteline_1->Show();
+		this->ft_whiteline_1->Show();
+		this->ft_whiteline_2->Show();
+		this->bt_whiteline_1->Show();
+		this->bt_whiteline_2->Show();
 		this->name->Show();
 		this->Foto_usu->Show();
 		this->clientes->Show();
@@ -366,10 +453,16 @@ namespace VetPro {
 		this->Foto_usu->Hide();
 		this->clientes->Hide();
 		this->citas->Hide();
+		this->msg_whiteline_1->Hide();
+		this->ft_whiteline_1->Hide();
+		this->ft_whiteline_2->Hide();
+		this->bt_whiteline_1->Hide();
+		this->bt_whiteline_2->Hide();
 		while (x >= 0) {
 			this->Menu->Size = System::Drawing::Size(x, 588);
-			x-=2;
+			x-=3;
 		}
+		this->Menu->Size = System::Drawing::Size(0, 588);
 		return x;
 	}
 
