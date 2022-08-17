@@ -59,3 +59,9 @@ Comenzamos diseñando un prototipo de nuestra aplicación, teniendo ya una idea 
 
 ===========================
 <h2 dir="auto">Instalacion de MySQL Workbench</h2>
+Paso 1: Ve a la página de MySQL Workbench en AcademicSoftware y haz clic en el botón 'Descargar MySQL Workbench' para descargar el archivo de instalación.
+
+Paso 2: Abre el archivo de instalación MSI de tu carpeta de descargas y haz clic en Next para iniciar la instalación.
+![Vet logo](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/W.paso2.png)
+
+
