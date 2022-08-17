@@ -56,3 +56,5 @@ Comenzamos diseñando un prototipo de nuestra aplicación, teniendo ya una idea 
 
 ### Diagrama de la base de datos
 ![Vet Arqui](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/Arqui_DB.png)
+
+===========================
