@@ -1,6 +1,7 @@
 #pragma once
 #include "Cita.h"
 #include "Cliente.h"
+#include "CircularDisplay_forPictureBox.h"
 
 namespace VetPro {
 
@@ -10,7 +11,6 @@ namespace VetPro {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-	using namespace System::Drawing::Drawing2D;
 	using namespace System::Text;
 	using namespace System::IO;
 	using namespace System::Threading;
@@ -83,9 +83,9 @@ namespace VetPro {
 			conn->Close();
 			
 			//Cambia la forma de la imagen del usuario de un cuadrado a un elipse
-			GraphicsPath^ cp = gcnew System::Drawing::Drawing2D::GraphicsPath();
-			cp->AddEllipse(this->Foto_usu->DisplayRectangle);
-			this->Foto_usu->Region = gcnew System::Drawing::Region(cp);
+			CircularDisplay_forPictureBox cd;
+			cd(this->Foto_usu);
+			
 		}
 	protected:
 		~Main_menu() {
@@ -107,12 +107,10 @@ namespace VetPro {
 	private: System::Windows::Forms::PictureBox^ logo;
 	private: System::Windows::Forms::PictureBox^ Foto_usu;
 	private: System::Windows::Forms::PictureBox^ bt_whiteline_2;
-
 	private: System::Windows::Forms::PictureBox^ bt_whiteline_1;
 	private: System::Windows::Forms::PictureBox^ ft_whiteline_1;
 	private: System::Windows::Forms::PictureBox^ ft_whiteline_2;
 	private: System::Windows::Forms::PictureBox^ msg_whiteline_1;
-
 
 	private: System::ComponentModel::Container ^components;
 
@@ -479,7 +477,6 @@ namespace VetPro {
 			comp = true;
 		}
 	}
-
 	//Se encarga de gestionar las ventanas que se abren en el panelShowAll 
 	private: System::Windows::Forms::Form^ f_activo = nullptr;
 	private: Void abrirfh(System::Windows::Forms::Form^ f_hijo) {

@@ -1,8 +1,5 @@
 #pragma once
-#using <System.Windows.Forms.dll>
-#using <System.Drawing.dll>
-#using <System.dll>
-#using <System.Data.dll>
+#include "CircularDisplay_forPictureBox.h"
 
 namespace VetPro {
 
@@ -37,9 +34,8 @@ namespace VetPro {
 			this->txt_scont->Size = System::Drawing::Size(215, 22);
 
 			//Cambia la forma de la imagen del usuario de un cuadrado a un elipse
-			GraphicsPath^ ap = gcnew System::Drawing::Drawing2D::GraphicsPath();
-			ap->AddEllipse(this->regis_img->DisplayRectangle);
-			this->regis_img->Region = gcnew System::Drawing::Region(ap);
+			CircularDisplay_forPictureBox cd;
+			cd(this->regis_img);
 		}
 
 	protected:

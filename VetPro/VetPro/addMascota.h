@@ -1,4 +1,5 @@
 #pragma once
+#include "CircularDisplay_forPictureBox.h"
 
 namespace VetPro {
 
@@ -48,9 +49,8 @@ namespace VetPro {
 			}
 
 			//Cambia la forma de la imagen de la mascota de un cuadrado a un elipse
-			GraphicsPath^ ap = gcnew System::Drawing::Drawing2D::GraphicsPath();
-			ap->AddEllipse(this->masc_Picture->DisplayRectangle);
-			this->masc_Picture->Region = gcnew System::Drawing::Region(ap);
+			CircularDisplay_forPictureBox cd;
+			cd(this->masc_Picture);
 		}
 
 	protected:

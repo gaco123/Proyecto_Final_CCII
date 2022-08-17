@@ -64,6 +64,9 @@
     <ClInclude Include="Cita.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="CircularDisplay_forPictureBox.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="VetPro.rc" />

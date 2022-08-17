@@ -145,6 +145,7 @@
     <ClInclude Include="addMascota.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="CircularDisplay_forPictureBox.h" />
     <ClInclude Include="Cita.h">
       <FileType>CppForm</FileType>
     </ClInclude>

@@ -1,7 +1,7 @@
 #pragma once
 #pragma once
-
 #include "addCitas.h"
+
 namespace VetPro {
 
 	using namespace System;
@@ -29,8 +29,18 @@ namespace VetPro {
 	private: MySqlConnection^ conn = gcnew MySqlConnection(connectionString);
 	private: System::Windows::Forms::Button^ n_cita;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::TableLayoutPanel^ tabla_Citas;
+	private: System::Windows::Forms::TabControl^ mult_cit;
 
+
+
+
+
+
+
+
+
+	private: System::Windows::Forms::TabPage^ tabPage1;
+	private: System::Windows::Forms::TableLayoutPanel^ tabla_Citas;
 	private: System::Windows::Forms::Label^ txt_id;
 	private: System::Windows::Forms::Label^ txt_hora;
 	private: System::Windows::Forms::Label^ txt_fecha;
@@ -48,6 +58,8 @@ namespace VetPro {
 		void InitializeComponent(void) {
 			this->n_cita = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->mult_cit = (gcnew System::Windows::Forms::TabControl());
+			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->tabla_Citas = (gcnew System::Windows::Forms::TableLayoutPanel());
 			this->txt_id = (gcnew System::Windows::Forms::Label());
 			this->txt_hora = (gcnew System::Windows::Forms::Label());
@@ -55,6 +67,8 @@ namespace VetPro {
 			this->txt_obs = (gcnew System::Windows::Forms::Label());
 			this->txt_idcliente = (gcnew System::Windows::Forms::Label());
 			this->txt_idmascota = (gcnew System::Windows::Forms::Label());
+			this->mult_cit->SuspendLayout();
+			this->tabPage1->SuspendLayout();
 			this->tabla_Citas->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -83,30 +97,52 @@ namespace VetPro {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(429, 84);
 			this->label3->TabIndex = 36;
-			this->label3->Text = L"Citas del Día";
+			this->label3->Text = L"Citas";
 			this->label3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// mult_cit
+			// 
+			this->mult_cit->Controls->Add(this->tabPage1);
+			this->mult_cit->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->mult_cit->Location = System::Drawing::Point(40, 95);
+			this->mult_cit->Name = L"mult_cit";
+			this->mult_cit->SelectedIndex = 0;
+			this->mult_cit->Size = System::Drawing::Size(954, 427);
+			this->mult_cit->TabIndex = 42;
+			// 
+			// tabPage1
+			// 
+			this->tabPage1->Controls->Add(this->tabla_Citas);
+			this->tabPage1->Location = System::Drawing::Point(4, 27);
+			this->tabPage1->Name = L"tabPage1";
+			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage1->Size = System::Drawing::Size(946, 396);
+			this->tabPage1->TabIndex = 0;
+			this->tabPage1->Text = L"Citas";
+			this->tabPage1->UseVisualStyleBackColor = true;
 			// 
 			// tabla_Citas
 			// 
 			this->tabla_Citas->ColumnCount = 6;
 			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute, 39)));
-			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 11.9608F)));
-			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 13.62126F)));
-			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 51.49502F)));
-			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 10.52049F)));
-			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 12.29236F)));
+			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 11.97398F)));
+			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 13.63627F)));
+			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 51.55176F)));
+			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 10.53208F)));
+			this->tabla_Citas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 12.30591F)));
 			this->tabla_Citas->Controls->Add(this->txt_id, 0, 0);
 			this->tabla_Citas->Controls->Add(this->txt_hora, 1, 0);
 			this->tabla_Citas->Controls->Add(this->txt_fecha, 2, 0);
 			this->tabla_Citas->Controls->Add(this->txt_obs, 3, 0);
 			this->tabla_Citas->Controls->Add(this->txt_idcliente, 4, 0);
 			this->tabla_Citas->Controls->Add(this->txt_idmascota, 5, 0);
-			this->tabla_Citas->Location = System::Drawing::Point(38, 117);
+			this->tabla_Citas->Location = System::Drawing::Point(6, 3);
 			this->tabla_Citas->Name = L"tabla_Citas";
 			this->tabla_Citas->RowCount = 1;
 			this->tabla_Citas->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 40)));
 			this->tabla_Citas->Size = System::Drawing::Size(942, 408);
-			this->tabla_Citas->TabIndex = 41;
+			this->tabla_Citas->TabIndex = 42;
 			// 
 			// txt_id
 			// 
@@ -197,13 +233,15 @@ namespace VetPro {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1250, 550);
-			this->Controls->Add(this->tabla_Citas);
+			this->Controls->Add(this->mult_cit);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->n_cita);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Cita";
 			this->Text = L"Citas";
+			this->mult_cit->ResumeLayout(false);
+			this->tabPage1->ResumeLayout(false);
 			this->tabla_Citas->ResumeLayout(false);
 			this->tabla_Citas->PerformLayout();
 			this->ResumeLayout(false);
