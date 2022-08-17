@@ -66,4 +66,24 @@ Comenzamos diseñando un prototipo de nuestra aplicación, teniendo ya una idea 
 
 ![Vet logo](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/W.paso2.png)
 
+<p><strong>Paso 3:</strong>&nbsp;Haz clic en Next para instalar el software en la ubicaci&oacute;n predeterminada. Tambi&eacute;n puedes cambiar la carpeta de destino.</p>
+
+![Vet logo](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/W.paso3.png)
+
+<p><strong>Paso 4:</strong>&nbsp;Haz clic en Next para instalar&nbsp;todas las funcionalidades del programa o elige Custom para los usuarios avanzados.</p>
+
+![Vet logo](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/W.paso4.png)
+
+<p><strong>Paso 5:</strong>&nbsp;Haz clic en Install para iniciar la instalaci&oacute;n.</p>
+
+![Vet logo](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/W.paso5.png)
+
+<p><strong>Paso 6:</strong>&nbsp;Una vez finalizada la instalaci&oacute;n, marca la casilla para lanzar el programa y haz clic en&nbsp;Finish.<br />El programa est&aacute; instalado y listo para usar.</p>
+
+![Vet logo](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/W.paso6.png)
+
+![Vet logo](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/W.paso6.2.png)
+
+
+
 
