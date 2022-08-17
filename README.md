@@ -58,3 +58,4 @@ Comenzamos diseñando un prototipo de nuestra aplicación, teniendo ya una idea 
 ![Vet Arqui](https://raw.githubusercontent.com/gaco123/Proyecto_Final_CCII/master/Extras/Arqui_DB.png)
 
 ===========================
+<h2 dir="auto">Instalacion de MySQL Workbench</h2>
