@@ -30,15 +30,6 @@ namespace VetPro {
 	private: System::Windows::Forms::Button^ n_cita;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::TabControl^ mult_cit;
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::TableLayoutPanel^ tabla_Citas;
 	private: System::Windows::Forms::Label^ txt_id;
@@ -314,7 +305,6 @@ namespace VetPro {
 		this->tabla_Citas->Hide();
 		while (it < idElementx) {
 			this->tabla_Citas->Controls->RemoveByKey(L"element_" + it);
-			this->Controls->RemoveByKey(L"element_" + it);
 			it++;
 		}
 		this->tabla_Citas->Show();

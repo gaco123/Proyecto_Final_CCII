@@ -334,7 +334,7 @@ namespace VetPro {
 			this->tabla_Mascotas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				449)));
 			this->tabla_Mascotas->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				18)));
+				95)));
 			this->tabla_Mascotas->Controls->Add(this->txt_id2, 0, 0);
 			this->tabla_Mascotas->Controls->Add(this->txt_nombre, 1, 0);
 			this->tabla_Mascotas->Controls->Add(this->txt_nac, 2, 0);
@@ -529,7 +529,7 @@ namespace VetPro {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Cliente";
-			this->Text = L"Cliente";
+			this->Text = L"d";
 			this->mult_cli_mas->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabla_Clientes->ResumeLayout(false);
