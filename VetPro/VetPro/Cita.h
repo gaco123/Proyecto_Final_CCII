@@ -324,7 +324,7 @@ namespace VetPro {
 			x->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			x->Margin = System::Windows::Forms::Padding(3);
-			x->Name = L"sub_element_" + idElementx;
+			x->Name = L"element_" + idElementx;
 			x->Text = L"" + ntext;
 			x->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->tabla_Citas->Controls->Add(x, Columnx, Rowx);
