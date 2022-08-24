@@ -33,6 +33,12 @@ Nosotros buscamos realizar un programa de escritorio que **solucione esta proble
 El lenguaje de programación usado para nuestro programa será C++, también usaremos una interfaz de programación de aplicación gráfica **(WinForms)** y una base de datos (en este caso **MySql Workbench**), la cual se encargará de almacenar y mantener seguros todos los datos de la aplicación en la nube.
 
 ===========================
+## VIDEO EXPLICANDO LAS DIAPOSITIVAS SOBRE EL PROYECTO
+===========================
+
+[![Alt text](https://img.youtube.com/vi/McuwFxxFJ-g/0.jpg)](https://www.youtube.com/watch?v=McuwFxxFJ-g)
+
+===========================
 ## PROCESO SEGUIDO POR EL MOMENTO
 ===========================
 
